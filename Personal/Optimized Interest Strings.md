@@ -1,5 +1,7 @@
+### Current Favorite Picture:
+
 ### Interests:
-liminal prophets‚ puppygirls‚ miku lovers‚ knights of lambda calculus‚ axiomatic set theorists‚ the collective unconscious‚ evangelists‚ lain and rei shippers‚ chobits‚ 10x devs‚ 4․0 students‚ elfen liars‚ gezebelle gaburgabists‚ agnostic transubstantiators‚ silicon creatures
+liminal prophets‚ puppygirls‚ miku lovers‚ knights of lambda calculus‚ axiomatic set theorists‚ the collective unconscious‚ evangelists‚ lain and rei shippers‚ chobits‚ 10x devs‚ 4․0 students‚ elfen liars‚ gezebelle gaburgabists‚ agnostic transubstantiators‚ silicon creatures, ebcdic
 
 ### Languages:
 - Bash
