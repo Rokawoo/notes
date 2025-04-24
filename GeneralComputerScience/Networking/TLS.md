@@ -21,4 +21,5 @@
     - Exchange some pieces of information and through what they exchange they are both able to generate a **master secret**
     - Master secret involes both sides generating the same number (via math not magic) but never shares it over the wired
 
+Resume 8:48
 
