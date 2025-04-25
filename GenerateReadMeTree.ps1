@@ -4,10 +4,10 @@
 .DESCRIPTION
     Creates a professional directory tree visualization similar to 'tree /f'
     and inserts it into README.md after a specified marker, automatically
-    handling Markdown formatting with appropriate line breaks.
+    handling Markdown formatting with appropriate line breaks and proper indentation.
 .NOTES
     Author: Rokawoo
-    Version: 1.3
+    Version: 1.4
     Last Updated: 2025-04-24
 #>
 
@@ -15,7 +15,8 @@
 param(
     [string]$ReadmePath = "README.md",
     [string]$MarkerText = "Notes Tree",
-    [string]$NewLineChar = "<br>",  # Empty by default for cleaner Markdown formatting
+    [string]$NewLineChar = "<br>",
+    [string]$IndentChar = "&nbsp;",
     [string[]]$ExcludeFolders = @(".git", "node_modules", ".vscode", "bin", "obj"),
     [string[]]$ExcludeFiles = @(".DS_Store", "thumbs.db"),
     [int]$MaxDepth = 5,
@@ -111,6 +112,23 @@ function Test-ExcludePattern {
     return $false
 }
 
+function Convert-SpacesToNbsp {
+    param(
+        [string]$Text,
+        [string]$IndentChar
+    )
+    
+    # Replace leading spaces with non-breaking spaces
+    # Find groups of spaces at the beginning of the string
+    if ($Text -match "^(\s+)") {
+        $spaces = $matches[1]
+        $nbspIndent = $IndentChar * $spaces.Length
+        return $Text -replace "^\s+", $nbspIndent
+    }
+    
+    return $Text
+}
+
 function Get-DirectoryTree {
     param (
         [Parameter(Mandatory=$true)]
@@ -118,7 +136,9 @@ function Get-DirectoryTree {
         
         [string]$Prefix = "",
         
-        [int]$CurrentDepth = 0
+        [int]$CurrentDepth = 0,
+        
+        [string]$IndentChar = "&nbsp;"
     )
     
     if ($CurrentDepth -gt $MaxDepth) {
@@ -144,15 +164,24 @@ function Get-DirectoryTree {
             $isLastItem = ($i -eq $itemCount - 1)
             
             # Determine connector characters based on position
-            $connector = if ($isLastItem) { "\------- " } else { "+------- " }
-            $childPrefix = if ($isLastItem) { "$Prefix        " } else { "$Prefix|       " }
+            $connector = if ($isLastItem) { "\\------- " } else { "+------- " }
+            
+            # Use non-breaking spaces for indentation instead of regular spaces
+            $currentLine = "$Prefix$connector"
+            
+            # Create child prefix with proper non-breaking spaces
+            $childPrefix = if ($isLastItem) {
+                "$Prefix$($IndentChar * 8)"  # 8 spaces for alignment
+            } else {
+                "$Prefix|$($IndentChar * 7)"  # 7 spaces after the pipe
+            }
             
             if ($item.PSIsContainer) {
                 # Add directory entry with better formatting
-                $output += "$Prefix$connector[DIR] $($item.Name)"
+                $output += "$currentLine[DIR] $($item.Name)"
                 
                 # Process subdirectories recursively
-                $childItems = Get-DirectoryTree -Path $item.FullName -Prefix $childPrefix -CurrentDepth ($CurrentDepth + 1)
+                $childItems = Get-DirectoryTree -Path $item.FullName -Prefix $childPrefix -CurrentDepth ($CurrentDepth + 1) -IndentChar $IndentChar
                 $output += $childItems
             }
             else {
@@ -168,7 +197,7 @@ function Get-DirectoryTree {
                     $fileInfo += " ($size)"
                 }
                 
-                $output += "$Prefix$connector$fileInfo"
+                $output += "$currentLine$fileInfo"
             }
         }
     }
@@ -261,7 +290,7 @@ try {
     
     $treeHeader = "|   $projectName"
     $treeLines = @($treeHeader)
-    $treeLines += Get-DirectoryTree -Path $rootDirectory
+    $treeLines += Get-DirectoryTree -Path $rootDirectory -IndentChar $IndentChar
     
     # Update the README file with proper markdown line breaks
     $updated = Update-ReadmeWithTree -ReadmePath $ReadmePath -MarkerText $MarkerText -TreeLines $treeLines -NewLineChar $NewLineChar
@@ -272,11 +301,8 @@ try {
     if ($updated) {
         Write-ColorOutput "SUCCESS: Tree structure has been added to README.md after '$MarkerText'." "Success"
         Write-ColorOutput "Process completed in $elapsedTime seconds" "Success"
-        if ($NewLineChar) {
-            Write-ColorOutput "Line breaks: Using '$NewLineChar' for Markdown compatibility" "Info"
-        } else {
-            Write-ColorOutput "Line breaks: Using standard line breaks for code block formatting" "Info"
-        }
+        Write-ColorOutput "Line breaks: Using '$NewLineChar' for Markdown compatibility" "Info"
+        Write-ColorOutput "Indentation: Using '$IndentChar' for Markdown-safe indentation" "Info"
     }
 }
 catch {
