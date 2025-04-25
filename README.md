@@ -8,15 +8,20 @@
 
 # Notes Tree
 <!-- BEGIN DIRECTORY TREE -->
-<!-- Generated on 2025-04-25 02:07:19 -->
-|   MyNotes<br>
+<!-- Generated on 2025-04-25 14:26:22 -->
+|   notes<br>
 +------- [DIR] University<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [MD] TechnicalCommunication.md<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [FILE] Reminder-TransferNotes.gitkeep<br>
 +------- [DIR] Personal<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] Optimized Interest Strings.md<br>
 +------- [DIR] GeneralComputerScience<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [DIR] Networking<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] TLS.md<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [DIR] Networking<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [MD] TransportLayerSecurity.md<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] CertificateAuthorities.md<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [DIR] ComputerArchitecture<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] RiscV.md<br>
++------- [MD] StyleGuide.md<br>
 +------- [MD] README.md<br>
 \\------- [PS1] GenerateReadMeTree.ps1
 <!-- END DIRECTORY TREE -->
