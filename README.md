@@ -4,6 +4,8 @@
 > ⭐ These notes are very imformeowtive~! :3<br>
 > &nbsp;➥ [NROL-39] Nothing Is Out Of Reach 
 
+![mari read](https://github.com/user-attachments/assets/438e5c2c-222d-4195-9181-5066a0d1e8e1)
+
 # Notes Tree
 <!-- BEGIN DIRECTORY TREE -->
 <!-- Generated on 2025-04-25 01:09:50 -->
