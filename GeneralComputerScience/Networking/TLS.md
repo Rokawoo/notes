@@ -22,7 +22,7 @@ After the handshake, all further communication is encrypted with the negotiated 
 ### Handshake Messages in Wireshark
 
 #### Client Hello
-```Haskell
+```C
 - Handshake Type
 - Length
 - Protocol Version (TLS 1.2/1.3)
@@ -34,7 +34,7 @@ After the handshake, all further communication is encrypted with the negotiated 
 ```
 
 #### Server Hello
-```Haskell
+```C
 - Handshake Type
 - Length
 - Protocol Version (TLS 1.2/1.3)
@@ -79,32 +79,32 @@ After the handshake, all further communication is encrypted with the negotiated 
 
 #### Symmetric Key Example
 ```Haskell
-Server and Client Share Key:
+# Server and Client Share Key:
 Secret Key: ABCD
 
-Client:
+# Client:
 Generate M
 Encrypt M with Secret Key
 f(M, ABCD) -> N
 Pass N to Server
 
-Server:
+# Server:
 f(N, ABCD) -> M
 ```
 
 #### Asymmetric Key Example
 ```Haskell
-Server:
+# Server:
 Public: 1234
 Private: <unknown>
 
-Client:
+# Client:
 Generate G
 Encrypt G with Server.Public
 f(G, pub) -> H
 Pass H to Server
 
-Server:
+# Server:
 f(H, priv) -> G
 ```
 
