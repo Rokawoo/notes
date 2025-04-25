@@ -178,12 +178,15 @@ IT improves business processes by:
 - Indicates logical and chronological sequence
 - Shows handoffs between different functional areas
 - Serves as communication and training tool
+![image](https://github.com/user-attachments/assets/4961016c-cc0e-4126-9780-2a85d3deab53)
+
 
 #### Swim Lane Diagram Symbols
 - **Circle/oblong**: Starting and ending points of an event
 - **Rectangle**: Activity in the process
 - **Diamond**: Decision point requiring a choice
 - **Arrow**: Indicates chronological flow of the process
+![image](https://github.com/user-attachments/assets/2f015016-e902-4824-b66e-1ece96ec65fb)
 
 ## Enterprise Systems
 
