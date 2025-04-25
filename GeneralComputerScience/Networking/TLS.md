@@ -5,6 +5,7 @@
 1. TLS is a protocol that provides encryption and data integrity for communications between a:
     - Client
     - Server
+    - TLS 1.3 is the latest version
 
 2. HTTP(S) where S stans for Secure Socket Layer (S.S.L.):
     - SSL is a predecessor to TLS
@@ -21,5 +22,57 @@
     - Exchange some pieces of information and through what they exchange they are both able to generate a **master secret**
     - Master secret involes both sides generating the same number (via math not magic) but never shares it over the wired
 
-Resume 8:48
+5. Key Types
+    - Symmetric Key: 
+    ```
+    (Master Secret)
+    f(M,k) -> N
+    f(N,k) -> M
+    ```
+    - Asymmetric Key:
+    ```
+    (Public-Private Key)
+    f(M, priv) -> N
+    f(N, priv) -> fail
+    f(N, pub)  -> M
 
+    f(O, pub)  -> P
+    f(P, priv) -> O
+    ```
+
+6. Example Usage of Keys
+    - Symmetric Key:
+        - Server and Client Share Key:
+        ```
+        Secret Key: ABCD
+        ```
+        - Client
+        ```
+        Generate M
+        Encrypt M with Secret Key
+        f(M, ABCD) -> N
+        Pass N to Server
+        ```
+        - Server
+        ```
+        f(N, ABCD) -> M
+        ```
+    - Asymmetric Key:
+        - Server
+        ```
+        Public: 1234
+        Private: <unknown>
+        ```
+        - Client
+        ```
+        Generate G
+        Encrypt G with Server.Public
+        f(G, pub) -> H
+        Pass H to Server
+        ```
+        - Server
+        ```
+        f(H, priv) -> G
+        ```
+
+7. Symmetric keys offer superior security because they're never transmitted publicly. In asymmetric systems, the public key creates an inherent vulnerability as with sufficient computational power, attackers could potentially derive the private key through mathematical analysis.
