@@ -3,7 +3,7 @@
    ## Trust Model
    - CAs form the foundation of TLS/SSL security
    - CAs form hierarchical trust chains of arbitrary length
-     ```
+     ```Haskell
      CA = Certificate Authority
      
            Root CA
