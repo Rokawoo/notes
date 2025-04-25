@@ -2,19 +2,20 @@
 .SYNOPSIS
     Generates a formatted directory tree and updates README.md
 .DESCRIPTION
-    This script creates a professional directory tree visualization similar to 'tree /f'
-    and updates the README.md file by replacing any existing tree structure
-    after the specified marker text.
+    Creates a professional directory tree visualization similar to 'tree /f'
+    and inserts it into README.md after a specified marker, automatically
+    handling Markdown formatting with appropriate line breaks.
 .NOTES
     Author: Rokawoo
-    Version: 1.1
+    Version: 1.3
     Last Updated: 2025-04-24
 #>
 
 [CmdletBinding()]
 param(
     [string]$ReadmePath = "README.md",
-    [string]$MarkerText = "Notes tree",
+    [string]$MarkerText = "Notes Tree",
+    [string]$NewLineChar = "<br>",  # Empty by default for cleaner Markdown formatting
     [string[]]$ExcludeFolders = @(".git", "node_modules", ".vscode", "bin", "obj"),
     [string[]]$ExcludeFiles = @(".DS_Store", "thumbs.db"),
     [int]$MaxDepth = 5,
@@ -182,13 +183,14 @@ function Update-ReadmeWithTree {
     param(
         [string]$ReadmePath,
         [string]$MarkerText,
-        [string[]]$TreeLines
+        [string[]]$TreeLines,
+        [string]$NewLineChar
     )
     
     # Check if README exists, create it if not
     if (-not (Test-Path $ReadmePath)) {
         Write-ColorOutput "README.md not found. Creating new file." "Warning"
-        "# My Project`n`n$MarkerText" | Set-Content -Path $ReadmePath
+        "# My Project$([Environment]::NewLine)$([Environment]::NewLine)$MarkerText" | Set-Content -Path $ReadmePath
     }
     
     # Read the entire content of the README file
@@ -196,7 +198,7 @@ function Update-ReadmeWithTree {
     
     if (-not $readmeContent.Contains($MarkerText)) {
         Write-ColorOutput "Marker text '$MarkerText' not found. Adding it to README.md." "Warning"
-        $readmeContent += "`n`n$MarkerText"
+        $readmeContent += "$([Environment]::NewLine)$([Environment]::NewLine)$MarkerText"
         $readmeContent | Set-Content -Path $ReadmePath -NoNewline
     }
     
@@ -206,7 +208,19 @@ function Update-ReadmeWithTree {
     # Format the tree as a code block with metadata
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
     
-    $treeContent = $TreeLines -join "`n"
+    # Format tree content for markdown
+    # Join all tree lines with line breaks using NewLineChar
+    $treeContent = ""
+    foreach ($line in $TreeLines) {
+        # Add the NewLineChar only if it's not the last line
+        if ($line -ne $TreeLines[-1]) {
+            $treeContent += "$line$NewLineChar$([Environment]::NewLine)"
+        } else {
+            $treeContent += "$line"
+        }
+    }
+    
+    # Prepare the formatted tree with code block
     $formattedTree = @"
 
 <!-- BEGIN DIRECTORY TREE -->
@@ -215,13 +229,13 @@ $treeContent
 <!-- END DIRECTORY TREE -->
 
 "@
+
+    # Find all text starting from marker up to the next non-whitespace line after any existing tree
+    $markerPattern = "$MarkerText[\s\S]*?(?:<!-- END DIRECTORY TREE -->[\r\n]+)"
     
-    # Create a regex pattern to find and replace existing tree
-    $treePattern = "(?s)$MarkerText\s*?<!-- BEGIN DIRECTORY TREE -->.*?<!-- END DIRECTORY TREE -->\s*?"
-    
-    if ($readmeContent -match $treePattern) {
-        # Replace existing tree
-        $newContent = $readmeContent -replace $treePattern, "$MarkerText$formattedTree"
+    if ($readmeContent -match $markerPattern) {
+        # Replace entire section from marker to end of existing tree
+        $newContent = $readmeContent -replace $markerPattern, "$MarkerText$formattedTree"
     }
     else {
         # No existing tree, append after marker
@@ -249,8 +263,8 @@ try {
     $treeLines = @($treeHeader)
     $treeLines += Get-DirectoryTree -Path $rootDirectory
     
-    # Update the README file
-    $updated = Update-ReadmeWithTree -ReadmePath $ReadmePath -MarkerText $MarkerText -TreeLines $treeLines
+    # Update the README file with proper markdown line breaks
+    $updated = Update-ReadmeWithTree -ReadmePath $ReadmePath -MarkerText $MarkerText -TreeLines $treeLines -NewLineChar $NewLineChar
     
     $sw.Stop()
     $elapsedTime = $sw.Elapsed.TotalSeconds.ToString("0.00")
@@ -258,6 +272,11 @@ try {
     if ($updated) {
         Write-ColorOutput "SUCCESS: Tree structure has been added to README.md after '$MarkerText'." "Success"
         Write-ColorOutput "Process completed in $elapsedTime seconds" "Success"
+        if ($NewLineChar) {
+            Write-ColorOutput "Line breaks: Using '$NewLineChar' for Markdown compatibility" "Info"
+        } else {
+            Write-ColorOutput "Line breaks: Using standard line breaks for code block formatting" "Info"
+        }
     }
 }
 catch {

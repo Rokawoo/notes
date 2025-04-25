@@ -4,19 +4,17 @@
 > ⭐ These notes are very imformeowtive~! :3<br>
 > &nbsp;➥ [NROL-39] Nothing Is Out Of Reach 
 
-# Notes tree:
+# Notes Tree
 <!-- BEGIN DIRECTORY TREE -->
-<!-- Generated on 2025-04-24 23:37:34 -->
-|   MyNotes
-+------- [DIR] University
-|       \------- [FILE] Reminder-TransferNotes.gitkeep
-+------- [DIR] Personal
-|       \------- [MD] Optimized Interest Strings.md
-+------- [DIR] GeneralComputerScience
-|       \------- [DIR] Networking
-|               \------- [MD] TLS.md
-+------- [MD] README.md
+<!-- Generated on 2025-04-24 23:55:17 -->
+|   MyNotes<br>
++------- [DIR] University<br>
+|       \------- [FILE] Reminder-TransferNotes.gitkeep<br>
++------- [DIR] Personal<br>
+|       \------- [MD] Optimized Interest Strings.md<br>
++------- [DIR] GeneralComputerScience<br>
+|       \------- [DIR] Networking<br>
+|               \------- [MD] TLS.md<br>
++------- [MD] README.md<br>
 \------- [PS1] GenerateReadMeTree.ps1
 <!-- END DIRECTORY TREE -->
-
-:
