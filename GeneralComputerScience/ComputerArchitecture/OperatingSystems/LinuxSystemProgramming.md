@@ -27,6 +27,8 @@
 - Example: Shell > Program > Shell
 - Parent processes can spawn children and wait for their completion
 - Child processes inherit file descriptors and environment from parents
+![image](https://github.com/user-attachments/assets/2979dc76-8584-46fe-bf61-01e738ba26a3)
+
 
 ### Program Entry Points
 - Standard C programs start execution at `main()`
