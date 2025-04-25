@@ -7,7 +7,7 @@ TLS is a cryptographic protocol that secures network communications by providing
 - **Privacy**: Encrypts data in transit
 - **Integrity**: Ensures data hasn't been tampered with
 
-TLS 1.3 (latest version) improves on its predecessor SSL and earlier TLS versions with enhanced security and performance.
+TLS 1.3 (latest version as of 2025) improves on its predecessor SSL and earlier TLS versions with enhanced security and performance.
 
 ## Protocol Architecture
 
