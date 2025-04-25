@@ -11,7 +11,7 @@
        CA1   CA2   CA3
        /      |      \\
      CA1.1   CA2.1   CA3.1
-       |       |       |
+      |       |       |
      Certs   Certs   Certs
      ```
    - Trusting one CA in chain enables trusting all certificates it validates
