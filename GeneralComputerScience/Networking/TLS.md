@@ -76,3 +76,25 @@
         ```
 
 7. Symmetric keys offer superior security because they're never transmitted publicly. In asymmetric systems, the public key creates an inherent vulnerability as with sufficient computational power, attackers could potentially derive the private key through mathematical analysis.
+
+8. In Wireshark you can view the message atributes
+    - Client Hello
+        - Handshake Type
+        - Length
+        - Protocol Version (TLS 1.2/1.3)
+        - Cipher Suites
+            - TLS_RSA_WITH_AES_256_GCM_SHA384, ...
+            - We hope the server picks the top one
+        - Compression Methods:
+        - Extensions
+    - Server Hello
+        - Handshake Type
+        - Length
+        - Protocol Version (TLS 1.2/1.3)
+        - Selected Cipher Suite
+            - The server picks one of the cipher suites offered by the client
+            - E.g., TLS_RSA_WITH_AES_256_GCM_SHA384
+        - Selected Compression Method
+        - Extensions
+
+## This Ends the rough summeray for tls itself ----
