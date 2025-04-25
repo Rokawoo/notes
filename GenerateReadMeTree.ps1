@@ -6,7 +6,7 @@
     and updates the README.md file by replacing any existing tree structure
     after the specified marker text.
 .NOTES
-    Author: Rokawii
+    Author: Rokawoo
     Version: 1.1
     Last Updated: 2025-04-24
 #>
