@@ -164,7 +164,7 @@ function Get-DirectoryTree {
             $isLastItem = ($i -eq $itemCount - 1)
             
             # Determine connector characters based on position
-            $connector = if ($isLastItem) { "\\------- " } else { "+------- " }
+            $connector = if ($item.PSIsContainer) { "]------- " } elseif ($isLastItem) { "\\------- " } else { "+------- " }
             
             # Use non-breaking spaces for indentation instead of regular spaces
             $currentLine = "$Prefix$connector"
@@ -178,7 +178,7 @@ function Get-DirectoryTree {
             
             if ($item.PSIsContainer) {
                 # Add directory entry with better formatting
-                $output += "$currentLine[DIR] $($item.Name)"
+                $output += "**$currentLine[DIR] $($item.Name)**"
                 
                 # Process subdirectories recursively
                 $childItems = Get-DirectoryTree -Path $item.FullName -Prefix $childPrefix -CurrentDepth ($CurrentDepth + 1) -IndentChar $IndentChar
