@@ -18,24 +18,24 @@
 | nop                  | addi x0, x0, 0                 | No operation                   |
 | li rd, immediate     | Myriad sequences               | Load immediate                 |
 | mv rd, rs            | addi rd, rs, 0                 | Copy register                  |
-| not rd, rs           | xori rd, rs, -1                | One's complement              |
-| neg rd, rs           | sub rd, x0, rs                 | Two's complement              |
-| negw rd, rs          | subw rd, x0, rs                | Two's complement word         |
+| not rd, rs           | xori rd, rs, -1                | One's complement               |
+| neg rd, rs           | sub rd, x0, rs                 | Two's complement               |
+| negw rd, rs          | subw rd, x0, rs                | Two's complement word          |
 | sext.w rd, rs        | addiw rd, rs, 0                | Sign extend word               |
 | seqz rd, rs          | sltiu rd, rs, 1                | Set if = zero                  |
-| snez rd, rs          | sltu rd, x0, rs                | Set if ≠ zero                 |
+| snez rd, rs          | sltu rd, x0, rs                | Set if ≠ zero                  |
 | sltz rd, rs          | slt rd, rs, x0                 | Set if < zero                  |
 | sgtz rd, rs          | slt rd, x0, rs                 | Set if > zero                  |
 | beqz rs, offset      | beq rs, x0, offset             | Branch if = zero               |
-| bnez rs, offset      | bne rs, x0, offset             | Branch if ≠ zero              |
-| blez rs, offset      | bge x0, rs, offset             | Branch if ≤ zero              |
-| bgez rs, offset      | bge rs, x0, offset             | Branch if ≥ zero              |
+| bnez rs, offset      | bne rs, x0, offset             | Branch if ≠ zero               |
+| blez rs, offset      | bge x0, rs, offset             | Branch if ≤ zero               |
+| bgez rs, offset      | bge rs, x0, offset             | Branch if ≥ zero               |
 | bltz rs, offset      | blt rs, x0, offset             | Branch if < zero               |
 | bgtz rs, offset      | blt x0, rs, offset             | Branch if > zero               |
 | bgt rs, rt, offset   | blt rt, rs, offset             | Branch if >                    |
-| ble rs, rt, offset   | bge rt, rs, offset             | Branch if ≤                   |
+| ble rs, rt, offset   | bge rt, rs, offset             | Branch if ≤                    |
 | bgtu rs, rt, offset  | bltu rt, rs, offset            | Branch if >, unsigned          |
-| bleu rs, rt, offset  | bgeu rt, rs, offset            | Branch if ≤, unsigned         |
+| bleu rs, rt, offset  | bgeu rt, rs, offset            | Branch if ≤, unsigned          |
 | j offset             | jal x0, offset                 | Jump                           |
 | jal offset           | jal x1, offset                 | Jump and link                  |
 | jr rs                | jalr x0, 0(rs)                 | Jump register                  |
