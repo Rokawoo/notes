@@ -17,6 +17,7 @@ TLS 1.3 (latest version as of 2025) improves on its predecessor SSL and earlier 
 3. **Key Exchange**: Both parties establish shared secrets
 4. **Finished**: Verification that handshake completed successfully
 
+TLS 1.3 encrypts more handshake data in its initial hellos compared to TLS 1.2, further complicating outsider traffic analysis.  
 After the handshake, all further communication is encrypted with the negotiated parameters.
 
 ### Handshake Messages in Wireshark
@@ -110,7 +111,7 @@ f(H, priv) -> G
 
 ### TLS Cipher Suites
 
-A cipher suite is a combination of:
+A cipher suite is a bundle of cryptographic algorithms that work together to secure communications, combining:
 - Key exchange algorithm
 - Authentication method
 - Bulk encryption algorithm
