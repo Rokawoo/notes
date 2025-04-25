@@ -120,6 +120,9 @@ To estimate total processing power (rough measure):
 - Stores bits in capacitors that lose charge over time
 - Lower cost, higher density than SRAM
 - Reading a bit discharges the capacitor, requiring rewrite
+![image](https://github.com/user-attachments/assets/362cc62a-4029-4dfa-a3c9-bd8b4d6ffc20)
+![image](https://github.com/user-attachments/assets/a59cf89f-a413-465a-8692-a3bb24b5cd3e)
+
 
 #### SRAM (Static RAM)
 **Characteristics:**
@@ -238,6 +241,8 @@ To estimate total processing power (rough measure):
 - **Level 3 Cache**: 10 cycles access time; connected to DRAM
 - "Hotter" memory kept in lower cache levels
 - Modern CPUs good at projecting data up or down cache levels
+![image](https://github.com/user-attachments/assets/b4f3606c-26ef-4080-af14-0b635a0ffc9d)
+
 
 ### DRAM Structure
 
