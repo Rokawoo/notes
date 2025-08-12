@@ -10,7 +10,7 @@ Published Research Journal Post-Grad Level Pages of Ultra Flavorful Condensed Ra
 
 # Notes Tree
 <!-- BEGIN DIRECTORY TREE -->
-<!-- Generated on 2025-08-11 22:34:26 -->
+<!-- Generated on 2025-08-11 23:25:52 -->
 |   MyNotes<br>
 **]------- [DIR] University**<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [MD] TechnicalCommunication.md<br>
@@ -18,6 +18,7 @@ Published Research Journal Post-Grad Level Pages of Ultra Flavorful Condensed Ra
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] ManagementInformationSystems.md<br>
 **]------- [DIR] Personal**<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [MD] OptimizedInterestStrings.md<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [MD] Nursing.md<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] Carl Jung.md<br>
 **]------- [DIR] GeneralComputerScience**<br>
 **|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]------- [DIR] OperatingSystems**<br>
