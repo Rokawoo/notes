@@ -1,5 +1,7 @@
 # Congragulations, You Found My Notes ˃ ˕ ˂マ
-<sup>(Currently Under Construction - As I Try To Migrate My 999,999,999,999,999,999... Published Research Journal Post-Grad Level Pages of Ultra Flavorful Condensed Raw **KNOWLEDGE**)<sup>
+<sup>(**Currently Under Construction**) - As I Try To Migrate My 999,999,999,999,999,999...
+Published Research Journal Post-Grad Level Pages of Ultra Flavorful Condensed Raw **KNOWLEDGE** From My Nano-Quantum-Crystallic Hyper-Hydropneumatic Information Core with Thousands of Petabytes of Information.<sup>
+
 > [!NOTE]
 > ⭐ These notes are very imformeowtive~! :3<br>
 > &nbsp;➥ [NROL-39] Nothing Is Out Of Reach 
@@ -8,15 +10,24 @@
 
 # Notes Tree
 <!-- BEGIN DIRECTORY TREE -->
-<!-- Generated on 2025-04-25 02:07:19 -->
-|   MyNotes<br>
-+------- [DIR] University<br>
+<!-- Generated on 2025-04-25 15:01:12 -->
+|   notes<br>
+**]------- [DIR] University**<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [MD] TechnicalCommunication.md<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [FILE] Reminder-TransferNotes.gitkeep<br>
-+------- [DIR] Personal<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] Optimized Interest Strings.md<br>
-+------- [DIR] GeneralComputerScience<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [DIR] Networking<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] TLS.md<br>
+**]------- [DIR] Personal**<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] OptimizedInterestStrings.md<br>
+**]------- [DIR] GeneralComputerScience**<br>
+**|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]------- [DIR] Networking**<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [MD] TransportLayerSecurity.md<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] CertificateAuthorities.md<br>
+**|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]------- [DIR] LanguageTheory**<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] CoreLanguageConcepts.md<br>
+**|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]------- [DIR] ComputerArchitecture**<br>
+**|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]------- [DIR] OperatingSystems**<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] LinuxSystemProgramming.md<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] RiscV.md<br>
++------- [MD] StyleGuide.md<br>
 +------- [MD] README.md<br>
 \\------- [PS1] GenerateReadMeTree.ps1
 <!-- END DIRECTORY TREE -->
