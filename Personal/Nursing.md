@@ -1,5 +1,6 @@
 # Nursing Lecture Notes - Mark Klimek
-## Lecture 1: ABG Interpretation & Ventilator Management
+
+# Lecture 1: ABG Interpretation & Ventilator Management
 
 ## Table of Contents
 1. [ABG Interpretation](#abg-interpretation)
@@ -302,3 +303,178 @@ LOW Pressure = DISCONNECTION
 2. **Apply the rules** - Same/opposite direction analysis
 3. **Consider physiology** - What makes sense based on pathophysiology?
 4. **Choose systematically** - Don't overthink or second-guess solid knowledge
+
+---
+
+# Lecture 2: Substance Abuse & Aminoglycosides
+
+## Table of Contents
+1. [Therapeutic Communication](#therapeutic-communication)
+2. [Substance Classification](#substance-classification)
+3. [Overdose vs Withdrawal Framework](#overdose-vs-withdrawal-framework)
+4. [Neonatal Withdrawal](#neonatal-withdrawal)
+5. [Alcohol: AWS vs Delirium Tremens](#alcohol-aws-vs-delirium-tremens)
+6. [Aminoglycosides](#aminoglycosides)
+
+## Therapeutic Communication
+
+**Rule**: Use "I" never "you" when confronting patient about behavior
+
+**Codependency**: When codependent says no, dependent abuser will start demeaning their self-esteem
+
+## Substance Classification
+
+### The Rule
+**Every abused drug is an upper or a downer**
+
+### Uppers (5 total)
+- Caffeine
+- Cocaine
+- PCP/LSD (hallucinogens)  
+- Methamphetamine
+- **Adderall (ADD drug)**
+
+### Downers (135 total)
+**Everything not an upper is a downer**
+
+## Overdose vs Withdrawal Framework
+
+### Step Process
+1. **Upper or downer?**
+2. **Overdose (too much) or withdrawal (too little)?**
+
+### The Patterns
+- **Upper overdose** = everything goes up
+- **Downer overdose** = everything goes down
+- **Upper withdrawal** = everything goes down  
+- **Downer withdrawal** = everything goes up
+
+### Key Insight
+- **Upper overdose looks like downer withdrawal**
+- **Downer overdose looks like upper withdrawal**
+
+### Clinical Example
+**Patient high on cocaine - what's critical to assess?**
+- Cocaine = upper
+- High = overdose = everything goes up
+- **Don't** check respiratory rate (uppers don't cause respiratory arrest)
+- **Do** check reflexes, heart rate
+
+```
+Assessment Framework
+│
+├─ Step 1: Upper or Downer?
+│  └─ Check the lists above
+│
+├─ Step 2: Overdose or Withdrawal?  
+│  └─ Too much drug vs too little drug
+│
+└─ Step 3: Apply Pattern
+   ├─ Upper OD / Downer Withdrawal → Everything UP
+   └─ Downer OD / Upper Withdrawal → Everything DOWN
+```
+
+## Neonatal Withdrawal
+
+### Timeline Rules
+- **Always assume intoxication at birth** (not withdrawal)
+- **After 24 hours** = assume withdrawal
+
+### Example: Quaalude-Addicted Mom
+**24 hours after birth, select all that apply:**
+- Difficult to console ✓
+- Low core body temp ✗
+- Exaggerated startle reflex ✓  
+- Respiratory depression ✗
+- Seizure risk ✓
+- Shrill high-pitched cry ✓
+
+**Logic**: Quaaludes not on upper list → downer → withdrawal after 24 hours → downer withdrawal = everything goes up
+
+## Alcohol: AWS vs Delirium Tremens
+
+### Key Facts
+- **Every alcoholic** goes through alcohol withdrawal 24 hours after drinking
+- **Only minority** get delirium tremens  
+- **DT happens within 72 hours**
+- **AWS always precedes DT, but DT doesn't always follow AWS**
+
+### Critical Differences
+
+| | AWS | DT |
+|:--|:----|:---|
+| **Life-threatening** | No | Yes (can kill) |
+| **Dangerous to others** | No | Yes |
+| **Patient state** | Loud/obnoxious | Dangerous/unstable |
+
+### Care Differences
+
+| Intervention | AWS | DT |
+|:-------------|:----|:---|
+| **Diet** | Regular | NPO/clear liquids |
+| **Room** | Semi-private anywhere | Private near nurses station |
+| **Activity** | Up ad lib | Restricted |
+| **Restraints** | No | As needed |
+
+
+## Aminoglycosides
+
+### Memory Device
+**"Treat a mean old infection with a mean old '-micin'"**
+
+### Key Facts
+- Used when **nothing else works** (dangerous)
+- **All Aminoglycosides end in '-micin'** but not all '-micin' drugs are aminoglycosides
+- **Route: IM or IV** (not absorbed PO)
+- **Exception**: PO forms used to sterilize bowel before surgery
+
+### The "8" Rule
+Number 8 in ear reminds you:
+1. **Toxic to cranial nerve 8**
+2. **Give every 8 hours**
+
+### Toxicity: Think "Mice → Ears → Kidney"
+- **Mice** = micin
+- **Ears** = ototoxicity → monitor hearing (tinnitus)  
+- **Kidney** = nephrotoxicity → monitor creatinine
+
+### Trough and Peak Levels
+**Draw when**: Small difference between what works and kills
+
+#### Trough Levels
+- **When**: 30 minutes before next dose
+- **Rule**: Always 30 minutes ( drug / route doesn't matter)
+
+#### Peak Levels  
+- **When**: Depends on route
+- **Drug doesn't matter, route does**
+
+### Oral Aminoglycosides
+**Bowel sterilizers**: Neomycin and kanamycin
+- **No ototoxicity or nephrotoxicity** (not absorbed)
+- PO aminoglycoside = "expensive stool"
+
+```
+Trough/Peak Sequence (T.A.P.)
+│
+├─ Draw Trough (30 min before dose)
+├─ Administer Drug  
+└─ Draw Peak (time varies by route)
+```
+
+## Clinical Pearls
+
+### Test Strategy
+**Board assumptions**: All time in the world, all the staff in the world, staff don't mind assignment changes
+
+### Substance Abuse Questions
+1. Upper or downer?
+2. Overdose or withdrawal?  
+3. Pick the obvious answer
+
+### Most Tested Drug Groups
+1. Psych drugs
+2. Insulins  
+3. Anticoagulants
+4. Digitalis
+5. **Aminoglycosides**
