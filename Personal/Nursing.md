@@ -325,7 +325,7 @@ LOW Pressure = DISCONNECTION
 ## Substance Classification
 
 ### The Rule
-**Every abused drug is an upper or a downer**
+- **Every abused drug is an upper or a downer**
 
 ### Uppers (5 total)
 - Caffeine
@@ -335,7 +335,7 @@ LOW Pressure = DISCONNECTION
 - **Adderall (ADD drug)**
 
 ### Downers (135 total)
-**Everything not an upper is a downer**
+- **Everything not an upper is a downer**
 
 ## Overdose vs Withdrawal Framework
 
