@@ -10,11 +10,10 @@ Published Research Journal Post-Grad Level Pages of Ultra Flavorful Condensed Ra
 
 # Notes Tree
 <!-- BEGIN DIRECTORY TREE -->
-<!-- Generated on 2025-08-12 00:41:34 -->
+<!-- Generated on 2025-08-12 22:08:20 -->
 |   MyNotes<br>
 **]------- [DIR] University**<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [MD] TechnicalCommunication.md<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [FILE] Reminder-TransferNotes.gitkeep<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [MD] ManagementInformationSystems.md<br>
 **]------- [DIR] Personal**<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [MD] OptimizedInterestStrings.md<br>
