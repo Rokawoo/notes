@@ -1,5 +1,13 @@
 # Nursing Lecture Notes - Mark Klimek
 
+## Table of Contents
+1. [Lecture 1: ABG Interpretation & Ventilator Management](#lecture-1-abg-interpretation--ventilator-management)
+2. [Lecture 2: Substance Abuse & Aminoglycosides](#lecture-2-substance-abuse--aminoglycosides)
+3. [Lecture 3: Cardiovascular, Pulmonary & Precautions](#lecture-3-cardiovascular-pulmonary--precautions)
+4. [Lecture 4: Mobility & Psychiatric Assessment](#lecture-4-mobility--psychiatric-assessment)
+
+---
+
 # Lecture 1: ABG Interpretation & Ventilator Management
 
 ## Table of Contents
@@ -416,7 +424,6 @@ Assessment Framework
 | **Activity** | Up ad lib | Restricted |
 | **Restraints** | No | As needed |
 
-
 ## Aminoglycosides
 
 ### Memory Device
@@ -443,7 +450,7 @@ Number 8 in ear reminds you:
 
 #### Trough Levels
 - **When**: 30 minutes before next dose
-- **Rule**: Always 30 minutes ( drug / route doesn't matter)
+- **Rule**: Always 30 minutes (drug/route doesn't matter)
 
 #### Peak Levels  
 - **When**: Depends on route
@@ -478,3 +485,369 @@ Trough/Peak Sequence (T.A.P.)
 3. Anticoagulants
 4. Digitalis
 5. **Aminoglycosides**
+
+---
+
+# Lecture 3: Cardiovascular, Pulmonary & Precautions
+
+## Table of Contents
+1. [Cardiovascular](#cardiovascular)
+2. [Pulmonary](#pulmonary)
+3. [Precautions](#precautions)
+4. [General Principles](#general-principles)
+
+## Cardiovascular
+
+### Calcium Channel Blockers
+**Concept**: "Valium for the heart" - calms heart down
+
+#### Indications
+- **Give for**: Tachycardia, tachyarrhythmias, heart attack
+- **Do NOT give for**: Shock, heart block
+
+#### Classifications
+Calcium channel blockers are **negative inotropic, chronotropic, dromotropic** cardiac depressants
+
+#### The "AAA" Rule
+- **Antihypertensive**: Relax heart and vessels, lowers BP
+- **Anti-angina**: Treats angina by relaxing heart to use less O₂
+- **Anti-Atrial Arrhythmias**: Treats atrial arrhythmias ONLY
+  - ✓ Atrial flutter
+  - ✓ Atrial fibrillation
+  - ✗ Ventricular tachycardia
+  - ✗ Ventricular contractions
+
+#### Drug Names
+- **Anything ending in '-dipine'** = calcium channel blocker
+- **Verapamil** = calcium channel blocker
+
+#### Nursing Considerations
+- **Monitor**: Blood pressure when administering
+- **Hold**: If systolic BP under 100
+
+### Positive vs Negative Cardiac Effects
+- **Positive inotropic/chronotropic/dromotropic**: Speed up/stimulate the heart → cardiac stimulants
+- **Negative effects**: Slow down/depress the heart → cardiac depressants
+
+### Congenital Heart Defects
+
+#### Classification Rule
+**Every congenital heart defect is either trouble or no trouble**
+
+#### "TRouBLe" Memory Device (7 letters)
+- **T**: All CHDs beginning with 'T' are trouble
+- **R→L**: Right-to-left blood shunts are trouble
+- **B**: Blue (cyanotic) defects are trouble
+
+#### Treatment Decision
+- **Trouble defects**: Surgery now to live
+- **No-trouble defects**: Surgery maybe later
+
+### Emergency Cardiac Care
+**Ventricular Fibrillation** (no cardiac output):
+- **FIRST action**: Place backboard
+- **BEST action**: Begin chest compressions
+
+## Pulmonary
+
+### Chest Tube Management
+
+#### Tube Placement Rules
+- **Water is higher density than air**
+- **Pneumothorax**: Apical chest tube (air rises)
+- **Hemothorax**: Basilar chest tube (blood settles)
+
+#### Post-Surgery Assumptions
+- **Assume trauma is unilateral** unless otherwise specified
+- Place basilar AND apical tubes on surgical side
+- **Post-pneumonectomy**: No tube (no lung to treat)
+
+#### Emergency Procedures
+
+##### Pneumovac Breaks
+**Sequence**: CLAMP → CUT → SUBMERGE → UNCLAMP
+1. **FIRST**: Clamp to maintain negative pressure
+2. **BEST**: Cut tubing and submerge in sterile water
+3. Unclamp
+
+##### Tube Displacement
+- **FIRST**: Cover with gloved hand
+- **BEST**: Cover with vaseline gauze
+
+#### Troubleshooting
+- **Continuous bubbling**: Leak in system → tape it
+- **Intermittent bubbling in suction control**: Suction too low → turn up
+- **Never clamp**: For longer than 15 seconds without order
+
+#### Analogies
+- **Straight cath** : **Foley cath** = **Thoracentesis** : **Chest tube**
+
+## Precautions
+
+### Special Transmission Precautions
+Three types: Contact, Droplet, Airborne
+
+### Contact Precautions
+
+#### Indications
+- **Enteric infections** (fecal-oral route): C. diff, Hepatitis A, cholera
+- **Staph infections**
+- **RSV** (dangerous to infants - droplet but use contact because children put everything in mouth)
+
+#### Requirements
+| Component | Required |
+|:----------|:---------|
+| **Private room** | Preferred, not required (can cohort) |
+| **Mask** | No |
+| **Gloves** | Yes |
+| **Gown** | Yes |
+| **Handwashing** | Yes |
+| **Eye/face shield** | Only if needed for universal precautions |
+| **Dedicated equipment** | Yes |
+| **Disposable equipment** | Yes |
+
+### Droplet Precautions
+
+#### Indications
+- **Meningitis**
+- **H. influenzae** (epiglottitis)
+
+#### Requirements
+| Component | Required |
+|:----------|:---------|
+| **Private room** | Preferred, not required (can cohort) |
+| **Mask** | Yes |
+| **Gloves** | Yes |
+| **Gown** | No |
+| **Handwashing** | Yes |
+| **Eye/face shield** | Only if needed for universal precautions |
+| **Patient mask when leaving** | Yes |
+| **Disposable/dedicated equipment** | Yes |
+| **Negative airflow** | No |
+
+### Airborne Precautions
+
+#### Indications (Memory: "MMRT")
+- **Measles**
+- **Mumps**
+- **Rubella**
+- **Tuberculosis**
+- **Varicella** (chickenpox)
+
+#### Requirements
+| Component | Required |
+|:----------|:---------|
+| **Private room** | Required (unless cohorting) |
+| **Mask** | Yes |
+| **Gloves** | Yes |
+| **Gown** | No |
+| **Handwashing** | Yes |
+| **Eye/face shield** | No |
+| **Filter mask for TB** | Yes |
+| **Patient mask when leaving** | Yes |
+| **Disposable/dedicated equipment** | Not required |
+| **Negative airflow** | Yes |
+
+### Special Notes
+- **RSV and Tuberculosis are exceptions**: RSV is spread by droplets but use contact precautions; TB is spread by droplets but classified as airborne
+- **Culture and positive required** for contact and droplet precautions before implementation
+
+### PPE Donning and Doffing
+
+#### Donning Order
+**Gown → Mask → Goggles → Gloves**
+*(Reverse alphabetical for Gs, mask comes second)*
+
+#### Doffing Order
+**Gloves → Goggles → Gown → Mask**
+*(Alphabetical order)*
+
+## General Principles
+
+### Clinical Pearls
+- **Headache**: Great for select-all-that-apply because everything causes it
+- **FIRST vs BEST actions**: BEST assumes it's the only action you'll take
+- **Study IV math**: Microdrip = 60 drops/mL, Macrodrip = 10/15/20 drops/mL
+
+### Key Differences
+- **FIRST action**: Immediate priority in emergency
+- **BEST action**: Assumes this is the only intervention you'll perform
+
+---
+
+# Lecture 4: Mobility & Psychiatric Assessment
+
+## Table of Contents
+1. [Mobility Aids](#mobility-aids)
+2. [Psychiatric Assessment](#psychiatric-assessment)
+3. [Types of Reality Distortion](#types-of-reality-distortion)
+4. [Types of Psychosis](#types-of-psychosis)
+5. [Treatment Approaches](#treatment-approaches)
+
+## Mobility Aids
+
+### Crutch Gaits
+
+#### The Rule
+**"Even to Even, Odd to Odd"**
+
+#### Point System
+- **2-point gait**: Small illness (even number of leg injuries)
+- **3-point gait**: One leg injured (odd number)
+- **4-point gait**: Severe illness (even number of leg injuries)
+
+#### Application Framework
+- **Even number of injured legs** → Use even-numbered gait (2 or 4 point)
+- **Odd number of injured legs** → Use odd-numbered gait (3 point)
+
+### Walker Safety
+- **Do NOT tie anything to the front** of walkers
+
+## Psychiatric Assessment
+
+### Primary Classification Question
+**Step 1**: "Am I dealing with a psychotic or non-psychotic patient?"
+
+This determines:
+- Treatment approach
+- Goals
+- Prognosis
+- Medication
+- Length of stay
+- Legal considerations
+
+### Psychotic vs Non-Psychotic
+
+#### Non-Psychotic (Neurotic)
+- **Has insight** and is reality-based
+- **Knows they have a problem** and how it affects their life
+- **Shared reality**: What you hear, see, smell, and taste is what they hear, see, smell, and taste
+- **No**: Delusions, hallucinations, or illusions
+
+#### Psychotic
+**Any** crossing of reality boundaries makes them psychotic
+
+## Types of Reality Distortion
+
+### Delusions (Non-sensory beliefs)
+- **Grandiose**: Belief of superiority
+- **Somatic**: Delusions about body (superpowers, bugs in skin, male pregnancy, age changes)
+
+### Hallucinations (False sensory experiences)
+**Listed in order of commonality**:
+1. **Auditory**: Most common - voices telling you to harm yourself
+2. **Visual**: Seeing things
+3. **Tactile**: Feeling things
+4. **Gustatory**: Tasting things
+5. **Olfactory**: Smelling things
+
+### Illusions vs Hallucinations
+**Key Difference**: Illusions have a referent in reality
+
+| | Hallucination | Illusion |
+|:--|:------------|:---------|
+| **Reality base** | Nothing there | Something actually there |
+| **Process** | Complete fabrication | Misinterpretation of real stimulus |
+
+#### Examples
+- **Hallucination**: "I hear demon voices" (nothing actually there)
+- **Illusion**: Overhears nurses talking, says "I hear demon voices" (real voices misinterpreted)
+- **Hallucination**: Stares at wall, says "I see a bomb" (nothing there)
+- **Illusion**: Looks at fire extinguisher, says "I see a bomb" (real object misinterpreted)
+
+### Test Strategy
+**Test clue**: When the test adds a sentence telling you something was actually there, it indicates an **illusion**
+
+## Types of Psychosis
+
+### 1. Functional Psychotic
+- **No brain damage**
+- **Can function** in everyday life
+- **Can learn reality** but are currently psychotic
+- **Examples**: Schizophrenia, schizoaffective disorder, major depression, acute manics
+- **Bipolar note**: Functional, but only psychotic during manic phase
+
+### 2. Dementia
+- **Actual brain damage**
+- **Dysfunctional**
+- **Cannot learn reality**
+- **Examples**: Alzheimer's, organic brain syndrome, anything labeled "senile" or "dementia"
+
+### 3. Psychotic Delirium
+- **Temporary condition**
+- **Sudden and dramatic**
+- **Secondary** loss of reality
+- **Usually due to**: Chemical imbalance in the body
+
+## Treatment Approaches
+
+### Decision Tree
+
+```
+Psychiatric Assessment
+│
+├─ STEP 1: Psychotic or Non-psychotic?
+│  │
+│  ├─ NON-PSYCHOTIC
+│  │  └─ Pick best therapeutic normal response
+│  │
+│  └─ PSYCHOTIC
+│     └─ Go to Step 2
+│
+├─ STEP 2: Which type of psychosis?
+│  │
+│  ├─ FUNCTIONAL PSYCHOTIC
+│  │  └─ Present reality
+│  │
+│  ├─ DEMENTIA
+│  │  └─ Different approach needed
+│  │
+│  └─ PSYCHOTIC DELIRIUM
+│     └─ Address underlying cause
+│
+└─ STEP 3: Specific interventions
+   └─ For delusional patients:
+      ├─ Acknowledge their feelings
+      ├─ Don't ask probing questions
+      └─ Don't directly challenge reality
+```
+
+### Treatment Principles
+
+#### For Functional Psychotic Patients
+- **Present reality** when appropriate
+- **For delusional patients**:
+  - Acknowledge their feelings
+  - Don't ask probing questions about delusions
+  - Don't directly present reality in confrontational way
+
+#### Key Therapeutic Communication
+- **Use "I" statements** never "you" when confronting behavior
+- **Acknowledge feelings** without reinforcing delusions
+- **Avoid challenging** reality directly in delusional patients
+
+### Clinical Assessment Guidelines
+
+#### Always Determine First
+- **Psychotic vs non-psychotic** - this single determination guides **all** subsequent interventions
+- **Different psychosis types** require different approaches
+- **Never assume** - always assess reality orientation first
+
+#### Treatment Goals Differ
+- **Functional psychotic**: Can learn reality, rehabilitation possible
+- **Dementia**: Cannot learn reality, focus on comfort and safety
+- **Psychotic delirium**: Treat underlying cause, temporary condition
+
+## Clinical Pearls
+
+### Key Concepts
+- **Every psychiatric assessment** starts with determining reality orientation
+- **Illusions vs hallucinations** - look for reality referent in test questions
+- **Functional psychotics** can be helped to understand reality
+- **Dementia patients** cannot learn new reality concepts
+
+### Test-Taking Strategy
+- **Always determine psychotic vs non-psychotic first**
+- **Look for clues** about reality referents to distinguish illusions from hallucinations
+- **Remember** that different psychosis types need completely different approaches
+- **Don't** choose therapeutic responses for psychotic patients that would work for neurotic patients
