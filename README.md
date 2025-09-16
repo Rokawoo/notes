@@ -10,7 +10,7 @@ Published Research Journal Post-Grad Level Pages of Ultra Flavorful Condensed Ra
 
 # Notes Tree
 <!-- BEGIN DIRECTORY TREE -->
-<!-- Generated on 2025-09-15 22:52:46 -->
+<!-- Generated on 2025-09-15 23:23:01 -->
 |   MyNotes<br>
 **]------- [DIR] University**<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [MD] TechnicalCommunication.md<br>
@@ -18,6 +18,7 @@ Published Research Journal Post-Grad Level Pages of Ultra Flavorful Condensed Ra
 **]------- [DIR] Personal**<br>
 **|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]------- [DIR] Learning**<br>
 **|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]------- [DIR] C++**<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [FILE] DecisionMaking.cpp<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+------- [FILE] BasicsAndDataTypes.exe<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\------- [FILE] BasicsAndDataTypes.cpp<br>
 **|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]------- [DIR] Appreciation Incarnate**<br>
