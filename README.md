@@ -10,7 +10,7 @@ Published Research Journal Post-Grad Level Pages of Ultra Flavorful Condensed Ra
 
 # Notes Tree
 <!-- BEGIN DIRECTORY TREE -->
-<!-- Generated on 2025-09-26 15:15:48 -->
+<!-- Generated on 2025-09-26 16:55:20 -->
 |   MyNotes<br>
 **]------- [DIR] University**<br>
 **|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]------- [DIR] SE310-SoftwareDesign**<br>
