@@ -243,9 +243,44 @@ for (Type element : array) {
 - Both implement List interface → interchangeable as List type
 - Can transfer data between them using `.addAll()`
 - Can be passed/returned as generic List type
-``java
+```java
 List<String> list1 = new ArrayList<>();
     List<String> list2 = new LinkedList<>();
     list2.addAll(list1);  // Transfer all elements
 ```
 
+# Pass by Value vs Pass by Reference
+
+## Pass by Value
+- Copy of value passed to method
+- Original unchanged after method exits
+
+## Pass by Reference  
+- Memory address passed to method
+- Changes persist after method exits
+
+## Java: Always Pass by Value
+
+### Primitives
+- Actual value copied
+- Original stays same
+```java
+    int x = 10;
+    changeValue(x);  // x still 1
+```
+
+### Objects
+- Reference (memory address) copied
+- Can modify object through copied reference
+- Cannot reassign original reference
+
+### Example
+```java
+MyObject obj = new MyObject();  // value = 10
+    modifyObject(obj);               // Pass copy of reference
+    // Inside method: obj.setValue(999)
+    // After method: original obj.value = 999
+```
+**Key**: Java passes reference **by value** for objects
+- Modify object contents: ✓ Changes persist
+- Reassign reference: ✗ Original unchanged
