@@ -388,3 +388,30 @@ Use `super(args)` first in child constructor:
         }
     }
 ```
+
+# Packages
+- Named collection of related classes
+
+## Types
+- **Built-in**: Java standard library
+- **User-defined**: Custom packages
+
+    ## Usage
+```java
+    package com.company;     // First line of file
+    
+    import java.util.*;      // Import all
+    import java.util.List;   // Import specific
+```
+
+## Default Package
+- No package statement = current directory
+- Small projects only
+
+## Directory Structure
+- **Package must match directory path**
+- `com.company.project` → `com/company/project/MyClass.java`
+- Class file location must mirror package name
+
+## Naming
+- Reverse domain: `com.company.project`
