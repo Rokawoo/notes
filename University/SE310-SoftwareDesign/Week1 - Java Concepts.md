@@ -126,3 +126,65 @@ class Counter {
         static int count = 0;  // Shared by all Counter objects
     }
 ```
+
+# Interface
+- Contract that defines required methods and constants for implementing classes
+- Cannot be instantiated directly
+
+## Interface Properties
+- Methods are abstract by default
+- Variables are `public static final` by default
+- Defines protocol of behavior for implementing classes
+- Class can implement multiple interfaces
+
+## Implementation Syntax
+```java
+    [modifier] class ClassName implements InterfaceName1, InterfaceName2 {
+        // Must implement ALL abstract methods from interfaces
+    }
+```
+
+# Serialization
+
+## Definition
+- Convert object state into byte stream for storage/transmission
+- Allows objects to persist beyond program execution
+
+## Implementation Requirements
+```java
+import java.io.*;
+    
+    class MyClass implements Serializable {
+        private static final long serialVersionUID = 1L;
+        // Class members
+    }
+```
+
+## Key Points
+- **serialVersionUID**: Unique identifier for version control
+    - Type: `static final long`
+    - Ensures compatibility between saved and loaded objects
+    - Update when class structure changes
+- Use relative paths with `File.separator` for platform independence
+- Objects can be serialized on one platform, deserialized on another
+
+## Stream Classes
+- **FileOutputStream**: Creates output stream for writing data to file
+- **ObjectOutputStream**: Writes primitive types and object graphs to OutputStream
+
+## Deserialization
+- Convert byte stream back into object
+- Reconstructs object state from stored data
+
+## Transient Keyword
+- Marks fields that should NOT be serialized
+- Use for:
+    - I/O objects (streams, connections, buffers)
+    - Temporary or derived data
+    - Sensitive information
+```java
+transient private FileWriter writer;  // Won't be serialized
+```
+
+## Important Notes
+- When a class contains references to other objects, ALL referenced objects must also implement Serializable interface, otherwise a `NotSerializableException` is thrown.
