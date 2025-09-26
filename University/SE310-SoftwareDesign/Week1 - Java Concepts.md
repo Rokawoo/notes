@@ -59,33 +59,33 @@
 ### Constructor Overloading (Polymorphic Constructors)
 ```java
 public class Person {
-        private String name;
-        private int age;
-        
-        // Default constructor
-        public Person() {
-            this.name = "Unknown";
-            this.age = 0;
-        }
-        
-        // Constructor with name only
-        public Person(String name) {
-            this.name = name;
-            this.age = 0;
-        }
-        
-        // Constructor with both parameters
-        public Person(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
-        
-        // Copy constructor
-        public Person(Person other) {
-            this.name = other.name;
-            this.age = other.age;
-        }
+    private String name;
+    private int age;
+    
+    // Default constructor
+    public Person() {
+        this.name = "Unknown";
+        this.age = 0;
     }
+    
+    // Constructor with name only
+    public Person(String name) {
+        this.name = name;
+        this.age = 0;
+    }
+    
+    // Constructor with both parameters
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    // Copy constructor
+    public Person(Person other) {
+        this.name = other.name;
+        this.age = other.age;
+    }
+}
 ```
 
 ## Getters (Accessors)
@@ -112,9 +112,9 @@ public class Person {
 - Called directly on class: `ClassName.methodName()`
 - Always used for `main` method (JVM entry point)
 ```java
-    public static void main(String[] args) {
-        // JVM entry point
-    }
+public static void main(String[] args) {
+    // JVM entry point
+}
 ```
 
 ## Static Variables (Class Variables)
@@ -139,9 +139,9 @@ class Counter {
 
 ## Implementation Syntax
 ```java
-    [modifier] class ClassName implements InterfaceName1, InterfaceName2 {
-        // Must implement ALL abstract methods from interfaces
-    }
+[modifier] class ClassName implements InterfaceName1, InterfaceName2 {
+    // Must implement ALL abstract methods from interfaces
+}
 ```
 
 # Serialization
@@ -154,9 +154,9 @@ class Counter {
 ```java
 import java.io.*;
     
-    class MyClass implements Serializable {
-        private static final long serialVersionUID = 1L;
-        // Class members
+class MyClass implements Serializable {
+    private static final long serialVersionUID = 1L;
+    // Class members
     }
 ```
 
@@ -188,3 +188,64 @@ transient private FileWriter writer;  // Won't be serialized
 
 ## Important Notes
 - When a class contains references to other objects, ALL referenced objects must also implement Serializable interface, otherwise a `NotSerializableException` is thrown.
+
+# Collections
+    
+## Collection Types
+- **LinkedList**: Dynamic list with node-based storage
+- **ArrayList**: Dynamic array-based list (generally preferred)
+- **Map**: Key-value pair interface
+- **HashMap**: Hash table implementation of Map
+
+> **Note**: ArrayList typically preferred over LinkedList and fixed arrays due to better performance for most use cases
+
+## Java Fixed Array
+- Fixed size, contiguous memory block
+- Stores same-type elements
+- Cannot resize after creation
+- Elements can be set to null/zero but not removed
+- Zero-indexed
+- Access length with `.length` property (proves arrays are objects, not primitives)
+
+### Array Iteration
+```java
+// Traditional for loop
+for (int i = 0; i < array.length; i++) {
+    System.out.println(array[i]);
+}
+
+// Enhanced for-each loop
+for (Type element : array) {
+    System.out.println(element);
+    }
+```
+
+## Lists
+- **List** is an interface that ArrayList and LinkedList implement
+- Defines required methods all List implementations must provide
+- Access size with `.size()` method (not `.length` like arrays)
+
+### ArrayList vs LinkedList
+
+#### ArrayList
+- Dynamic array implementation
+- Fast random access: O(1)
+- Slow insertion/deletion at beginning: O(n)
+- Better cache locality
+
+#### LinkedList  
+- Node-based implementation
+- Fast insertion/deletion at beginning: O(1)
+- Slow random access: O(n)
+- More memory overhead per element
+
+### Interoperability
+- Both implement List interface → interchangeable as List type
+- Can transfer data between them using `.addAll()`
+- Can be passed/returned as generic List type
+``java
+List<String> list1 = new ArrayList<>();
+    List<String> list2 = new LinkedList<>();
+    list2.addAll(list1);  // Transfer all elements
+```
+
