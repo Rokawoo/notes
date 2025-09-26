@@ -4,6 +4,8 @@
 - Shared vocabulary for developers
 
 # Objects
+- Traditionally data with methods
+- They are entities responsible for themselves
 
 ## Definition
 - **Conceptually**: A set of responsibilities
@@ -94,3 +96,33 @@ public class Person {
 
 ## General Purpose
 - Perform tasks or computations
+
+# Scope
+- Determines accessibility of classes, methods, and variables
+- Controls where elements can be accessed from in code 
+- (public, protected, private) use case depends on context 
+   - public is external facing
+   - private is internal facing 
+
+
+# Static
+
+## Static Methods
+- Can be called without creating instance of class
+- Called directly on class: `ClassName.methodName()`
+- Always used for `main` method (JVM entry point)
+```java
+    public static void main(String[] args) {
+        // JVM entry point
+    }
+```
+
+## Static Variables (Class Variables)
+- Single shared instance across all objects of the class
+- All instances access same memory location
+- Belongs to class, not individual objects
+```java
+class Counter {
+        static int count = 0;  // Shared by all Counter objects
+    }
+```
