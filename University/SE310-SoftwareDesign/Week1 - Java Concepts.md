@@ -110,11 +110,19 @@ public class Person {
 ## Static Methods
 - Can be called without creating instance of class
 - Called directly on class: `ClassName.methodName()`
+
 - Always used for `main` method (JVM entry point)
 ```java
 public static void main(String[] args) {
     // JVM entry point
 }
+```
+
+- Objects use static methods from their declared type, not their runtime type
+- Static method calls are resolved at compile-time based on reference type
+```java
+Animal myPet = new Dog();
+myPet.makeSound();  // Calls Animal.makeSound() if static, not Dog.makeSound()
 ```
 
 ## Static Variables (Class Variables)
@@ -284,3 +292,99 @@ MyObject obj = new MyObject();  // value = 10
 **Key**: Java passes reference **by value** for objects
 - Modify object contents: ✓ Changes persist
 - Reassign reference: ✗ Original unchanged
+
+# Inheritance
+
+## Core Concepts
+- Create new classes from existing (base/super) classes
+- Subclasses inherit properties/methods from parent
+- Can only extend one class (single inheritance)
+- Use `extends BaseClassName`
+
+## Access Modifiers in Inheritance
+- **protected**: Accessible in current and derived classes
+- **private**: Only accessible in current class
+- **default**: Package-level access
+
+## Method Overriding
+- Redefine parent method in child class
+- Use `@Override` annotation
+- Child class method replaces parent implementation
+- Non-overridden methods use parent implementation
+```java
+class Animal {
+    void makeSound() { }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() { }  // Replaces parent method
+}
+```
+
+# Method Binding
+
+## Static Binding (Compile-Time)
+- Applies to: `static`, `private`, `final` methods
+- Cannot be overridden
+- Resolved at compile-time using **reference type**
+- No ambiguity for compiler
+
+## Dynamic Binding (Runtime)
+- Used for overridable methods
+- Actual object type determines method called
+- Resolved at runtime based on **object type**, not reference
+```java
+Animal pet = new Dog();
+    pet.makeSound();  // Calls Dog's method (dynamic)
+    pet.staticMethod();  // Calls Animal's method (static)
+```
+
+# Abstract Classes
+
+## Properties
+- Cannot be instantiated
+- Can be inherited
+- Declared with `abstract` keyword
+- Shown in *italics* in UML
+
+## Abstract Methods
+- Method with no implementation
+- Must be overridden in non-abstract subclasses
+- Subclass implementing all abstract methods are called a **concrete class**
+
+```java
+abstract class Shape {
+        abstract void draw();  // No implementation
+    }
+    
+    class Circle extends Shape {
+        @Override
+        void draw() { }  // Must implement
+    }
+```
+
+## Access Rules
+- Abstract classes: `public`
+- Abstract methods: `public`/`protected`
+
+# Constructors with Inheritance
+
+## Constructor Chain
+1. Child constructor called
+2. Parent default constructor runs automatically
+3. Child constructor continues
+
+## With Parameters
+Use `super(args)` first in child constructor:
+```java
+    class Parent {
+        Parent(String name) { }
+    }
+    
+    class Child extends Parent {
+        Child(String name) {
+            super(name);  // Must be first line
+        }
+    }
+```
