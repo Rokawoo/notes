@@ -1,4 +1,4 @@
-# Search Problems and Methods - Refined Notes
+# Search Problems and Methods - Week 2 Notes
 
 ## Core Concepts
 
@@ -22,7 +22,7 @@
 - **Optimal**: Find best solution (slower, explores more)
 - **Replanning**: Adapt plan during execution when failures occur
 
-## Search Problem Components (PEAS++)
+## Search Problem Components
 
 1. **States**: Problem configurations (abstracted from world)
 2. **Initial State**: Starting configuration
@@ -33,34 +33,13 @@
 
 **Solution**: Action sequence from initial → goal state
 
-## Key Examples
-
-### Simple: Maze
-- **State**: (x, y, direction)
-- **Actions**: {advance, turn_left, turn_right}
-- **State Space**: rows × columns × 4 directions
-
-### Complex: 8-Puzzle  
-- **State**: 9-position vector of tile locations
-- **Actions**: Move blank {up, down, left, right}
-- **State Space**: 9! = 362,880 states
-- **Challenge**: Large branching factor
-
-### Constrained: Fox-Goat-Cabbage
-- **State**: (fox_loc, goat_loc, cabbage_loc, boat_loc)
-- **Constraints**: Never leave predator-prey pairs alone
-- **State Space**: ≤54 states (many invalid)
-- **Challenge**: Constraint satisfaction
-
 ## Critical Distinctions
 
 ### World State vs Search State
 - **World State**: Complete environment details (intractable)
 - **Search State**: Minimal info for planning (abstraction is key)
-- Example: Pacman world state includes every pixel; search state just (x,y) + dot locations
 
 ### State Space Graph vs Search Tree
-
 | State Space Graph | Search Tree |
 |:-----------------|:------------|
 | Each state appears once | States can repeat |
@@ -68,25 +47,87 @@
 | Usually can't build fully | Build incrementally |
 | Nodes = states | Nodes = paths to states |
 
-**Key Insight**: Tree node represents entire path through graph
+## Uninformed Search Algorithms
 
-## Search Strategy Principles
+### Key Components
+- **Fringe/OPEN**: Nodes to explore (priority queue)
+- **CLOSED**: Already explored nodes (prevents cycles)
+- **Expansion**: Generate children of current node
+- **Strategy**: Order of node exploration
 
-1. **Incremental Construction**: Build only what's needed
-2. **Systematic Exploration**: Avoid missing solutions
-3. **Memory vs Time Trade-off**: Graph search (memory) vs tree search (time)
-4. **Repeated States**: Major inefficiency source in tree search
+### Depth-First Search (DFS)
+- **Strategy**: Expand deepest node first
+- **Implementation**: LIFO stack
+- **Time**: O(b^m) where b=branching, m=max depth
+- **Space**: O(bm) - only siblings on path
+- **Complete**: Only if prevent cycles
+- **Optimal**: No (finds leftmost solution)
 
-## Problem Difficulty Factors
+### Breadth-First Search (BFS)
+- **Strategy**: Expand shallowest node first
+- **Implementation**: FIFO queue
+- **Time**: O(b^s) where s=solution depth
+- **Space**: O(b^s) - stores entire tier
+- **Complete**: Yes (if solution exists)
+- **Optimal**: Only if all costs = 1
 
-- **State Space Size**: Exponential growth common (how many states are possible in our environment)
-- **Branching Factor**: Actions available per state
-- **Solution Depth**: Steps needed to reach goal
-- **Local Structure**: Dead ends, loops, symmetries
+### Uniform-Cost Search (UCS)
+- **Strategy**: Expand cheapest cumulative cost first
+- **Implementation**: Priority queue (by path cost)
+- **Time**: O(b^(C*/ε)) where C*=optimal cost, ε=min arc cost
+- **Space**: O(b^(C*/ε))
+- **Complete**: Yes (if costs positive)
+- **Optimal**: Yes
+- **Key**: Explores cost contours, not depth levels
 
-## Practical Implications
+### Iterative Deepening
+- **Strategy**: DFS with increasing depth limits (1, 2, 3...)
+- **Benefit**: DFS space advantage + BFS completeness
+- **Not wasteful**: Most work in deepest level
 
-- Small puzzles (8-puzzle): Brute force feasible
-- Route planning: Need heuristics
-- Games (Chess): Require approximation
-- Real-world: Must handle uncertainty, partial observability
+## Search Algorithm Comparison
+
+| Algorithm | Complete | Optimal | Time | Space |
+|:----------|:---------|:--------|:-----|:------|
+| DFS | No* | No | O(b^m) | O(bm) |
+| BFS | Yes | No* | O(b^s) | O(b^s) |
+| UCS | Yes | Yes | O(b^(C*/ε)) | O(b^(C*/ε)) |
+
+*DFS complete with cycle checking; BFS optimal if unit costs
+
+## Implementation Details
+
+### General Tree Search Pseudocode
+```
+OPEN = [Start]
+CLOSED = []
+WHILE OPEN not empty:
+    N = OPEN.remove()  // Based on strategy
+    IF goal(N): RETURN path
+    CLOSED.add(N)
+    FOR children C of N not in CLOSED/OPEN:
+        C.parent = N
+        OPEN.add(C)
+```
+
+### The One Queue Principle
+All uninformed searches use same algorithm with different fringe ordering:
+- DFS: Stack (LIFO)
+- BFS: Queue (FIFO)
+- UCS: Priority Queue (by cost)
+
+## Key Insights
+
+1. **Repeated States**: Critical to track (CLOSED list) to avoid exponential blowup
+2. **Search operates on models**: Quality limited by model accuracy
+3. **Trade-offs**: 
+   - DFS: Low memory, not optimal
+   - BFS: Guaranteed shortest path, high memory
+   - UCS: Optimal for weighted graphs, explores all directions
+
+## When to Use Which
+
+- **DFS**: Deep solutions, limited memory
+- **BFS**: Shallow solutions, need shortest path
+- **UCS**: Varying action costs, need optimal path
+- **Iterative Deepening**: Unknown depth, limited memory
