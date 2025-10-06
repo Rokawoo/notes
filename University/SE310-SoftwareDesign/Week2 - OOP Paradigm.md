@@ -66,3 +66,57 @@ Two factors:
 ## Debugging Reality
 - Fixing a bug is quick
 - Finding a bug takes time
+
+# Object-Oriented Solution Process
+
+## Specialization
+- Start with general program, refine it
+- Read specs → think about classes, methods, attributes, relationships
+- Progressively add detail from general to specific
+
+## Common Design Problems
+- **Redundancy**: Similar methods doing similar things (makeSlot vs makeHole)
+- **Messy Code**: Sign of poor design
+- **Tight Coupling**: Features indirectly linked, changes cascade everywhere
+
+# Design Patterns
+
+## Core Principle
+- Quality of software can be measured objectively
+- Good structures cannot be separated from problems they solve
+- Compare structures with same purpose
+- Choice depends on needs
+
+## Pattern Definition
+Solution to a problem in a context:
+- **Name**: Unique identifier
+- **Intent**: Purpose of pattern
+- **Problem**: What it's trying to solve
+- **Solution**: How pattern answers problem in context
+- **Participants/Collaborators**: Entities involved
+- **Consequences**: Cause and effect of using pattern
+- **Implementation**: How pattern is realized
+- **Generic Structure**: Standard diagram showing typical structure
+
+## Pattern Benefits
+- Reuse proven solutions
+- Establish common terminology
+- Easier to build from existing solutions
+- Many repetitive problems → patterns emerge
+- Multiple patterns can combine to solve complex problems
+
+## Design Approach
+- Discuss at proper level
+- Abstract before details
+- Work high-level to low-level
+
+## OO Design Principles
+Patterns illustrate basic concepts:
+- Encapsulation
+- Inheritance
+- Polymorphism
+
+## Good OO Development Rules
+- **Design to interfaces** (not implementations)
+- **Favor aggregation over inheritance**
+- **Find what varies and encapsulate it**
