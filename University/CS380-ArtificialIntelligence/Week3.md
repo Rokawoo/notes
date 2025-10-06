@@ -52,7 +52,7 @@
 
 ### A\* Search
 
-![alt text](image.png)
+![alt text](Assets/AStar-Graph.png)
 
 "Balance past costs with future estimates"
 
@@ -104,6 +104,7 @@
 - **Definition**: h(n) ≤ actual cost to goal
 - **Required for**: Tree search optimality
 - **Example**: Straight-line distance ≤ actual driving distance
+- **Goal**: Get as close as you can to the upper-bound (cost to goal) without going over
 
 ### Consistent Heuristic (Stronger)
 
