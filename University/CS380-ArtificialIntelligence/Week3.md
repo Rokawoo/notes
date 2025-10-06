@@ -67,6 +67,8 @@
 - Only h(n) → becomes Greedy (fast, often suboptimal)
 - g(n) + h(n) → A\* achieves both speed and optimality
 
+**Admissibility**: h(n) must always underestimate actual cost to goal (e.g., Euclidean distance as straight line from A to B will always be ≤ actual path distance)
+
 ## Critical Implementation Details
 
 ### When to Terminate
