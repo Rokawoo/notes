@@ -69,6 +69,16 @@
 
 **Admissibility**: h(n) must always underestimate actual cost to goal (e.g., Euclidean distance as straight line from A to B will always be ≤ actual path distance)
 
+### A\* Search Behavior Visualization
+
+![alt text](Assets/AStar-Bias.png)
+
+**Key Insight**: The heuristic biases search toward the goal while maintaining optimality
+
+- **UCS/BFS**: Explores uniformly in all directions (concentric circles from start)
+- **A\***: Explores elliptically, stretched toward the goal
+- The better the heuristic, the more focused the search becomes
+
 ## Critical Implementation Details
 
 ### When to Terminate
