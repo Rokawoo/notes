@@ -9,7 +9,7 @@
 
 ### Phase Cycle Table
 
-![alt text](Assets/Moon-PhaseCycle.png)
+![](Assets/Moon-PhaseCycle.png)
 
 | Phase           | Fraction Illuminated | Side Illuminated | Rises    | Sets     |
 | :-------------- | :------------------- | :--------------- | :------- | :------- |
@@ -24,7 +24,7 @@
 
 ## Shadows
 
-![alt text](Assets/Shadows-UmbraPenumbra.png)
+![](Assets/Shadows-UmbraPenumbra.png)
 
 ### Shadow Types
 
@@ -55,6 +55,8 @@ Earth blocks Sun's light and darkens Moon
 ### Solar Eclipse
 
 Moon blocks Sun's light and darkens Earth
+
+![](Assets/SolarEclipse-Types.png)
 
 **Types**:
 
@@ -94,6 +96,8 @@ G = 6.673×10⁻¹¹ N•m²/kg²
 - Greater separation → weaker attraction
 
 ### Tidal Bulges
+
+![](Assets/Tides-Bulge.png)
 
 **Two bulges form**:
 

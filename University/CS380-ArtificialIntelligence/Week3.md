@@ -52,7 +52,7 @@
 
 ### A\* Search
 
-![alt text](Assets/AStar-Graph.png)
+![](Assets/AStar-Graph.png)
 
 "Balance past costs with future estimates"
 
@@ -71,7 +71,7 @@
 
 ### A\* Search Behavior Visualization
 
-![alt text](Assets/AStar-Bias.png)
+![](Assets/AStar-Bias.png)
 
 **Key Insight**: The heuristic biases search toward the goal while maintaining optimality
 
