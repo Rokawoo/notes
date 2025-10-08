@@ -61,8 +61,10 @@ Moon blocks Sun's light and darkens Earth
 **Types**:
 
 - **Total**: Sun completely covered by Moon
+  - More likely when Moon is close to Earth
 - **Partial**: Only part of Sun covered by Moon
 - **Annular**: Moon appears smaller than Sun, creating ring effect
+  - More likely when Moon is further away from Earth
 
 **Duration**: Maximum 7½ minutes
 

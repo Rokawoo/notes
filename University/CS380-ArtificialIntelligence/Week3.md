@@ -106,6 +106,8 @@
 - **Example**: Straight-line distance ≤ actual driving distance
 - **Goal**: Get as close as you can to the upper-bound (cost to goal) without going over
 
+**Admissibility**: h(n) ≤ actual cost to goal. The heuristic must never overestimate - like guessing a friend lives "at most 10 miles away" when they actually live 12 miles away is admissible. Straight-line distance works because you can't drive shorter than a straight line.
+
 ### Consistent Heuristic (Stronger)
 
 "Estimates can't jump up"
@@ -114,6 +116,8 @@
 - **Required for**: Graph search optimality
 - **Implication**: f-values never decrease along paths
 - **Result**: More efficient than just admissible
+
+**Consistency**: h(n) ≤ cost(n→n') + h(n'). The heuristic can't suddenly jump up as you move - if you estimate "5 miles left to goal" and walk 1 mile closer, your new estimate must be ≤ 4 miles (not suddenly "8 miles left"). This prevents the algorithm from second-guessing earlier decisions.
 
 ## Building Good Heuristics
 
