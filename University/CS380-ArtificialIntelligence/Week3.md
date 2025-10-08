@@ -215,3 +215,178 @@ Given optimal goal G₁ and suboptimal G₂:
 5. **Stop at the right time**: Dequeue goal, don't just find it
 
 The core insight: A\* intelligently balances "what we've paid" with "what we expect to pay" to efficiently find optimal paths.
+
+# Local Search Algorithms
+
+## The Paradigm Shift
+
+**Key Difference from Path-Based Search**:
+- **Path-based search**: The journey matters (how to get from A to B)
+- **Local search**: Only the destination matters (find the best configuration)
+
+**When to Use Local Search**:
+- State space = complete configurations
+- Path is irrelevant
+- Goal: Find configuration satisfying constraints
+- Examples: N-queens, scheduling, optimization problems
+
+**Core Approach**: Keep single current state, iteratively improve it
+
+## Hill Climbing
+
+### Basic Algorithm
+```
+1. Start at random state
+2. Repeat:
+   - Evaluate all neighbors
+   - Move to best neighbor
+3. Stop when no neighbor is better
+```
+
+**Strengths**:
+- Simple to implement
+- Memory efficient (only stores current state)
+- Often finds good solutions quickly
+
+**Weaknesses**:
+- Gets stuck in local maxima
+- Dependent on initial state
+- Can't escape plateaus
+
+### 8-Queens Example
+**Heuristic**: h = number of attacking queen pairs
+- Start with random configuration
+- Move queens to reduce conflicts
+- Often gets stuck at local minimum (h=1 instead of h=0)
+
+### Hill Climbing Variants
+
+**Stochastic Hill Climbing**:
+- Choose randomly among uphill moves
+- Avoids bias toward certain directions
+
+**First-Choice Hill Climbing**:
+- Generate successors randomly until finding improvement
+- Good for states with many successors
+
+**Random-Restart Hill Climbing**:
+- Run hill climbing multiple times from random starts
+- Take best solution found
+- Simple way to escape local maxima
+
+## Simulated Annealing
+
+### Core Intuition
+Inspired by metallurgy: Heat metal to unstick atoms, slowly cool to find low-energy configurations
+
+### Algorithm Mechanics
+**Temperature Parameter T**:
+- High T → Accept many bad moves (exploration)
+- Low T → Accept few bad moves (exploitation)
+- Gradually decrease T (annealing schedule)
+
+**Acceptance Probability**:
+- Always accept improvements
+- Accept worse moves with probability e^(ΔE/T)
+- ΔE = quality difference, T = temperature
+
+### Key Properties
+- **Theoretical guarantee**: With slow enough cooling, finds global optimum with probability → 1
+- **Practical reality**: Use faster cooling schedule, accept suboptimal solutions
+- Widely used in practice (airline scheduling, VLSI design)
+
+## Local Beam Search
+
+### Algorithm
+```
+1. Start with k random states
+2. Generate all successors of all k states
+3. Select best k successors from combined pool
+4. Repeat until goal found
+```
+
+**Key Insight**: Not just k parallel searches!
+- States "communicate" through selection
+- Successful states spawn more exploration nearby
+- Similar to breadth-first search with limited memory
+
+## Genetic Algorithms
+
+### Bio-Inspired Optimization
+
+**Representation**:
+- States = strings (chromosomes)
+- Population = k states
+- Fitness function evaluates quality
+
+### Genetic Operators
+
+**Selection**:
+- Probability proportional to fitness
+- Example: fitness 24,23,20,11 → probabilities 31%,29%,26%,14%
+
+**Crossover**:
+- Combine two parents to create offspring
+- Exchange subsequences between parents
+- Exploits good partial solutions
+
+**Mutation**:
+- Random changes with low probability
+- Maintains diversity
+- Prevents premature convergence
+
+### 8-Queens GA Example
+- **Encoding**: Position of queen in each column
+- **Fitness**: Number of non-attacking pairs (max=28)
+- **Crossover**: Split parent strings, recombine
+- **Mutation**: Randomly move a queen
+
+## Continuous State Spaces
+
+### Three Approaches
+
+**1. Discretization**:
+- Create grid with increment δ
+- Apply discrete algorithms
+- Trade-off: precision vs. computation
+
+**2. Random Perturbations**:
+- Generate random moves
+- Apply hill climbing or simulated annealing
+- Good when gradient unavailable
+
+**3. Gradient-Based Methods**:
+- Compute ∇f(x) = (∂f/∂x₁, ∂f/∂x₂, ...)
+- Gradient descent: x ← x - α∇f(x)
+- Finds local extrema where ∇f(x) = 0
+
+### Gradient Descent
+**Update Rule**: x ← x - α∇f(x)
+- α = learning rate (step size)
+- Direction: Steepest decrease
+- Converges to local minimum
+
+**Example - Facility Location**:
+- Minimize total distance to customers
+- f(x) = Σ√[(x-xᵢ)² + (y-yᵢ)²]
+- Solve ∇f(x) = 0 for optimal location
+
+## Comparison Summary
+
+| Algorithm | Escapes Local Max? | Memory | Guarantees |
+|:----------|:------------------|:-------|:-----------|
+| Hill Climbing | No | O(1) | None |
+| Random Restart | Yes (multiple runs) | O(1) | None |
+| Simulated Annealing | Yes (probabilistic) | O(1) | Global opt (theory) |
+| Beam Search | Partially | O(k) | None |
+| Genetic Algorithm | Yes (diversity) | O(k) | None |
+
+## Key Takeaways
+
+1. **Local search trades completeness for efficiency** - no systematic exploration
+2. **Randomization helps escape local optima** - all successful variants use it
+3. **Population-based methods balance exploration/exploitation** - multiple states provide robustness
+4. **Temperature/cooling schedules crucial** - controls exploration vs. exploitation trade-off
+5. **Problem encoding matters** - especially for genetic algorithms
+
+These algorithms excel at large-scale optimization where finding optimal paths is unnecessary or infeasible.
