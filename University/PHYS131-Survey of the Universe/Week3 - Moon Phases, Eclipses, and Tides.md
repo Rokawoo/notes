@@ -117,6 +117,7 @@ G = 6.673×10⁻¹¹ N•m²/kg²
 
 - Greatest tidal difference
 - Occurs at new and full moon
+   - (alignment with sun matters more than close or far side from sun)
 
 **Neap Tide**: Sun and Moon tides oppose
 
