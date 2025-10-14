@@ -28,9 +28,30 @@ The distribution of emitted radiation (spectrum shape) depends **only** on tempe
 - Peaks of different temperature stars fall in different parts of electromagnetic spectrum
 - Hotter stars emit more frequencies of light
 
+
+Spectra can tell us the surface temperature of our object.
+- The wavelength of the peak of an blackbody spectrum only depends on the blackbody's temperature (Wien's Law)
+
 ## Blackbody Curves
 
 As temperature increases:
 - More frequencies of light are emitted
 - More energy is emitted (curve's peak increases)
 - Peak wavelength shifts to shorter wavelengths (bluer)
+
+## Spectroscopy
+**Spectroscopy**: analyzing electromagnetic spectra to lean about distant atoms and molecules
+
+**Dispersion**: different wavelength light bends at different angles
+
+## The Atom
+Electrons can only orbit a nucleus at a specific distances. THese states are called energy levels and are unique to each element.
+- Nucleus & Proton Core
+- Electron Energy Level 1
+- ...
+- Electron Energy Level 7
+
+## Electron Transitions
+When an electron shifts between these energy levels, energy is absorbed or emitted as light. The wavelength of this light corresponds to the energy difference between the two energy levels.
+
+- Each element can only absorb and emit light that is specific to it.
