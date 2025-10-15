@@ -146,6 +146,8 @@ Consider this game tree evaluation:
 
 ## Resource Limitations
 
+![](Assets/GameTree-ResourceLimits.png)
+
 ### The Complexity Problem
 
 Real games have enormous search spaces:
