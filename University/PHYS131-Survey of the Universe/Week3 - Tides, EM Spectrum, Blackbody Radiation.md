@@ -1,4 +1,5 @@
 # Electromagnetic Radiation (a.k.a. Light)
+Light is both a wave and a particle (photon)
 
 ### Radiation
 Energy that can be transmitted through empty space.
@@ -42,6 +43,8 @@ Amplitude
 
 # Electromagnetic Spectrum
 
+![](Assets/Light-ElectromagneticWave.png)
+
 - **Wavelength (λ)** and **frequency (f)** are inversely proportional:  
   \( c = \lambda f \)
 
@@ -51,14 +54,12 @@ Amplitude
 
 ---
 
-## Radio Waves
+## Radio Waves (AM/FM/Microwaves/+)
 **Emitters:** Radio transmitters, stars, interstellar gas.  
 **Uses:** Communication (radio, TV, cell phones).  
 **Notes:** Longest wavelength, lowest frequency, lowest energy.
 
----
-
-## Microwaves
+### Microwaves
 **Emitters:** Radar, microwave ovens, certain astronomical objects.  
 **Uses:** Cooking, radar, satellite communication.  
 **Notes:** Shorter wavelength and higher energy than radio waves.
@@ -102,13 +103,25 @@ Amplitude
 
 # Spectra
 
+![](Assets/Light-Spectra.png)
+
 **Spectrum:** A graph showing how much energy is emitted by an object at each wavelength of light.
 
 - A **prism** or **diffraction grating** can be used to separate light into its component wavelengths.
 
 ## Blackbody Spectrum
 
+![](Assets/Light-BlackbodySpectrum.png)
+
 **Thermal Blackbody**: an idealized object that absorbs and re-emits (not reflects) all electromagnetic radiation that hits it - the emitted radiation only depends on the thermal blackbody's temperature
 
 e.g. a rod going from red to orange to white depending on how hot you heat it up
 this allows up to determine the temperature of far away objects
+
+## Blackbody Spectra
+All matter above 0 K emits electromagnetic radiation.
+
+The distribution of this emitted radiation (i.e. shape of the spectrum) **ONLY** depends on the temperature of the blackbody.
+- Blackbody curve increases for hotter objects.
+- Note how peaks of diffrent temperature stars fall in diffrent parts of electromagnetic spectrum.
+   - Hotter stars give off more differnt types of light
