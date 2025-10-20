@@ -122,6 +122,73 @@ Defines family of algorithms, encapsulates each one, makes them interchangeable.
 - Different implementations manifested through polymorphism
 - Need to manage several implementations of same basic algorithm
 
+# Bridge Pattern
+
+## Gang of Four Definition
+Decouple an abstraction from its implementation so that the two can vary independently.
+
+## Key Features
+
+### Intent
+- Separate class's interface from its implementation
+- Allow both to vary independently without affecting each other
+
+### Problem
+- When abstraction and implementation should vary independently
+- Proliferation of classes from trying to extend in multiple dimensions
+- Need to avoid permanent binding between abstraction and implementation
+
+### Solution
+- Separate abstraction and implementation into different class hierarchies
+- Use aggregation to connect abstraction to implementation
+- Bridge uses encapsulation, aggregation, can use inheritance
+
+### Participants & Collaborators
+- **Abstraction**: Defines abstract interface, maintains reference to Implementor
+- **RefinedAbstraction**: Extends interface defined by Abstraction
+- **Implementor**: Defines interface for implementation classes
+- **ConcreteImplementor**: Implements Implementor interface
+
+### Consequences
+- Decouples interface and implementation
+- Improves extensibility - can extend abstraction and implementation hierarchies independently
+- Hides implementation details from clients
+- Reduces number of subclasses
+
+### Implementation
+- Create two separate hierarchies: one for abstractions, one for implementations
+- Abstraction contains reference to implementation object
+- Abstraction delegates work to implementation object
+- Can switch implementations at runtime
+
+## UML Diagram
+```Haskell
+Client -----> Abstraction -----> Implementor
+                  ^                    ^
+                  |                    |
+         RefinedAbstraction    ConcreteImplementorA
+                              ConcreteImplementorB
+```
+
+## Example Structure
+```Haskell
+Abstraction
+- implementor: Implementor
++ operation()
+
+RefinedAbstraction extends Abstraction
++ refinedOperation()
+
+Implementor
++ operationImpl()
+
+ConcreteImplementorA implements Implementor
++ operationImpl()
+
+ConcreteImplementorB implements Implementor  
++ operationImpl()
+```
+
 ## Common Problematic Approaches
 
 ### Copy/Paste
