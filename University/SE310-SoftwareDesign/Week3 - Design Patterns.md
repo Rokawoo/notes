@@ -93,3 +93,97 @@ Adapter->SpecificRequest
 
 **Adapter**: When you need to use existing class and its interface is not the one you need  
 **Facade**: When you need to simplify and unify large interface or complex set of interfaces
+
+# Strategy Pattern
+
+## Definition
+Defines family of algorithms, encapsulates each one, makes them interchangeable. Strategy lets algorithm vary independently from clients that use it.
+
+## Intent
+- Enable use of different business rules or algorithms depending on context
+- Design for change wisely
+
+## Problem
+- Algorithm selection depends on client making request or data being acted on
+- How to handle different implementations of conceptually same task?
+
+## Solution
+- Separate algorithm selection from algorithm implementation
+- Find what varies and encapsulate it in its own class
+- Use aggregation to give object ability to handle functionality
+
+## Implementation
+- Context class contains abstract Strategy class
+- Strategy has abstract method specifying how to call algorithm
+- Each derived class implements needed algorithm
+
+## Based on Principles
+- Objects have responsibilities
+- Different implementations manifested through polymorphism
+- Need to manage several implementations of same basic algorithm
+
+## Common Problematic Approaches
+
+### Copy/Paste
+- Traditional method - maintenance headaches
+- Copy working code, paste elsewhere, modify
+
+### Switches/Ifs
+- Coupling and testing issues
+- Multiple variations create messy code
+- "Switch creep" - must find every place case is involved
+- Variations "dirty" the implementation
+- Hard to read flow
+
+### Function Pointers/Delegates
+- Used in C++/C#
+- Hides code in compact function
+- Can't retain state per-object → limited use
+
+### Inheritance Alone
+- Allows reuse
+- Problem: When things vary independently → too many classes!
+
+## Strategy Pattern Advantage
+- Pushes problem down the chain
+- From: One large hierarchy with all variations
+- To: Few smaller, independent hierarchies
+- Other system pieces can use smaller hierarchies
+
+## Two Common Change Approaches to Avoid
+- **Over-analyze**: Analysis paralysis
+- **Jump in**: Write code without long-term consideration
+
+# Additional Design Principles
+    
+## Software Development Problems
+
+### Poor Requirements
+- Incomplete, wrong, misleading users
+- Perfect requirements cannot be developed
+- Requirements always change
+- Code must accommodate changes
+
+### Debugging Reality
+- Fixing bug is quick
+- Finding bug takes time
+
+## Maintainability Factors
+- **Cohesion**: How closely operations in routine are related (high = good)
+- **Coupling**: Strength of connection between routines (low = good)
+
+## Delegation
+- Have sub-functions control themselves
+- Reduces coupling between components
+- Better than one main program controlling sub-programs
+
+## Functional Decomposition
+- Break complex problems into smaller parts
+- Each part handles specific task
+- Easier to deal with smaller problems
+
+## Object-Oriented Best Practices
+- Design to interfaces, not implementations
+- Favor aggregation over inheritance
+- Find what varies and encapsulate it
+- Objects should be responsible for themselves
