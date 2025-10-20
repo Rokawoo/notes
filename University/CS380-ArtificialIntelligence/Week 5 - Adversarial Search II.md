@@ -112,3 +112,93 @@ If evaluation function provides **upper bound** at MIN node:
 - More aggressive pruning than value-based pruning alone
 
 **Symmetry**: Lower bounds at MAX nodes enable similar early pruning.
+
+# Alpha-Beta Pruning Example
+MAX (α=-∞, β=+∞)
+       /              \
+     MIN              MIN
+    /    \           /    \
+  MAX    MAX       MAX    MAX
+  / \    / \       / \    / \
+ [6] ?   ? ?       ? ?    ? ?
+```
+Left-left MAX: v=6, α=6
+
+## Step 2: Explore Node 2
+```
+        MAX (α=-∞, β=+∞)
+       /              \
+     MIN              MIN
+    /    \           /    \
+  MAX    MAX       MAX    MAX
+  / \    / \       / \    / \
+ [6][5]  ? ?       ? ?    ? ?
+```
+Left-left MAX: v=max(6,5)=6 → returns **6**
+
+## Step 3: Left MIN Gets 6
+```
+        MAX (α=-∞, β=+∞)
+       /              \
+   MIN(v=6,β=6)       MIN
+    /    \           /    \
+  [6]    MAX       MAX    MAX
+         / \       / \    / \
+         ? ?       ? ?    ? ?
+```
+
+## Step 4: Explore Nodes 3, 4
+```
+        MAX (α=-∞, β=+∞)
+       /              \
+   MIN(v=6,β=6)       MIN
+    /    \           /    \
+  [6]    MAX       MAX    MAX
+         / \       / \    / \
+        [8][7]     ? ?    ? ?
+```
+Left-right MAX: v=max(8,7)=8 → returns **8**
+
+## Step 5: Left MIN Completes
+```
+        MAX (α=6, β=+∞)
+       /              \
+    [6]               MIN
+   MIN               /    \
+                   MAX    MAX
+                   / \    / \
+                   ? ?    ? ?
+```
+Left MIN: min(6,8)=**6** → Root updates α=6
+
+## Step 6: Explore Nodes 5, 6
+```
+        MAX (α=6, β=+∞)
+       /              \
+    [6]            MIN(v=2,β=2)
+   MIN               /    \
+                   [2]    MAX
+                   MAX     / \
+                          [?][?]
+```
+Right-left MAX: v=max(2,1)=2 → Right MIN gets v=2, β=2
+
+## Step 7: **PRUNE!**
+```
+        MAX (α=6, β=+∞)
+       /              \
+    [6]            MIN(β=2 ≤ α=6)
+   MIN               /    \
+                   [2]    [✗✗]
+                   MAX    PRUNED
+                   / \    
+                  [2][1]  
+```
+**Check**: β(2) ≤ α(6)? **YES!** → **PRUNE nodes 7 and 8**
+
+## Final Result
+```
+        MAX = 6
+       /       \
+    [6]       [2]
+   MIN        MIN
