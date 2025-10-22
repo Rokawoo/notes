@@ -123,8 +123,6 @@ Defines family of algorithms, encapsulates each one, makes them interchangeable.
 - Need to manage several implementations of same basic algorithm
 
 # Bridge Pattern
-
-## Gang of Four Definition
 Decouple an abstraction from its implementation so that the two can vary independently.
 
 ## Key Features
