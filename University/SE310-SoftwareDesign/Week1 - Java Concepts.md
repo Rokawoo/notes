@@ -274,7 +274,7 @@ List<String> list1 = new ArrayList<>();
 - Original stays same
 ```java
     int x = 10;
-    changeValue(x);  // x still 1
+    changeValue(x);  // x still 10
 ```
 
 ### Objects
