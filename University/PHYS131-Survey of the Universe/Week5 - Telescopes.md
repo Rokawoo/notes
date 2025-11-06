@@ -2,35 +2,43 @@
 
 ## Core Concepts
 
-Telescopes are instruments designed to collect, focus, and magnify electromagnetic radiation. The fundamental purpose of any telescope is to gather more light than the human eye can collect on its own, enabling us to observe fainter and more distant objects in the universe.
+Telescopes are tools that collect, focus, and magnify electromagnetic radiation (light). Their fundamental purpose is to gather more light than the human eye can collect, enabling us to observe fainter and more distant objects in the universe.
 
-### Light Gathering Power
+## Light Gathering Power
 
-The light gathering power of a telescope is directly proportional to its collecting area, which scales with the square of the diameter. This relationship can be expressed as:
+The light gathering power of a telescope depends on its collecting area:
 
 ```haskell
 Light Gathering Power ∝ Diameter²
 ```
 
-Doubling the diameter of a telescope quadruples its collecting area, which in turn quadruples the amount of light collected. This increased light collection allows larger telescopes to detect fainter objects, which are typically located at greater distances from Earth.
+This relationship means:
+- 2x the diameter = 4x the collecting area
+- 4x the collecting area = 4x the light collected
+- More light = ability to see fainter objects
+- Fainter objects are usually farther away
+
+Bigger telescopes can see fainter objects at greater distances.
 
 ## Resolution
 
-Resolution refers to a telescope's ability to distinguish two objects that appear close together in the sky. Higher resolution means the telescope can separate objects that are closer together, revealing finer details in astronomical observations.
+Resolution is the ability to distinguish two objects that are next to each other. Larger telescopes collect more light, which provides more information and reveals more detail.
+
+What you see up close or with a big telescope shows fine details. What you see from far away or with a small telescope appears blurred together.
 
 ### Angular Resolution
 
-Since what we perceive depends on both the physical separation between two objects and their distance from the observer, resolution is measured in terms of angular separation rather than linear distance. Objects that appear well-separated when viewed up close or with a large telescope may be indistinguishable when viewed from far away or with a small telescope.
+Since what we perceive depends on both the separation between two objects and their distance from us, resolution is measured in terms of angular separations rather than linear distance.
 
 ### Diffraction Limit
 
-The diffraction limit represents the theoretical best resolution a telescope could achieve if its performance were only limited by the wave nature of light. This limit is determined by two factors:
+The diffraction limit is the theoretical best resolution a telescope could achieve if it were only limited by the wave nature of light:
 
 ```haskell
 Resolution ∝ Wavelength / Diameter
 ```
 
-This relationship reveals two important principles:
+This reveals two key principles:
 - Longer wavelengths produce poorer resolution
 - Larger telescope diameters provide better resolution
 
@@ -38,88 +46,173 @@ This relationship reveals two important principles:
 
 ### Seeing
 
-Seeing describes the smearing and blurring of light as it passes through Earth's atmosphere. As light travels through pockets of air at different temperatures, it undergoes constant redirection through refraction. This atmospheric turbulence causes the image of astronomical objects to blur and shimmer, limiting the effective resolution of ground-based telescopes regardless of their size.
+Seeing is the smearing and blurring of light as it passes through Earth's atmosphere. As light travels through pockets of air at different temperatures, it undergoes constant redirection (refraction). This atmospheric turbulence smears the image of astronomical targets.
 
-For ground-based observations, seeing primarily limits the resolution of images rather than the telescope's size or light absorption between the observer and the source.
+For ground-based observations, seeing primarily limits the resolution of images—not the telescope's size or light absorption between the observer and source.
 
 ### Active and Adaptive Optics
 
-Modern telescopes employ sophisticated techniques to counteract atmospheric distortion:
+Modern telescopes counteract atmospheric distortion through a four-step process:
 
-1. A bright reference star is selected, or a laser beam is projected into the sky to create an artificial guide star
-2. The telescope observes how the atmosphere distorts the known shape of this reference
-3. Deformable mirrors in the telescope adjust their shape in real time
-4. These adjustments compensate for atmospheric distortion, effectively reducing the effects of seeing
+1. Find a bright star or shine a laser into the sky
+2. Observe how the known shape gets smeared by the atmosphere
+3. Change the shape of the telescope's mirror in real time
+4. Diminish the effects of seeing
 
 ## Telescope Design
 
-### Reflector Telescopes
+### Types of Telescopes
 
-Reflector telescopes use mirrors to collect and focus light. Secondary mirrors redirect the focused light to a more convenient location for instruments or eyepieces. All modern scientific telescopes are reflectors due to the significant limitations of refractive designs.
+Two fundamental designs exist:
 
-### Refractor Telescopes
+**Reflector**: Uses mirrors to collect and focus light
 
-Refractor telescopes use lenses to collect and focus light. The Yerkes Observatory houses the largest refractor in the world, with a 40-inch diameter lens.
+**Refractor**: Uses lenses to collect and focus light
+
+### Reflection vs Refraction
+
+Reflection occurs when light bounces off a surface. Refraction occurs when light bends as it passes through a material.
+
+### Yerkes Observatory
+
+The Yerkes Observatory houses the largest refractor in the world, with a 40-inch diameter lens.
 
 ### Refractor Limitations
 
-Several fundamental problems make refractors impractical for large scientific instruments:
-- Glass lenses absorb some of the light passing through them, reducing efficiency
-- Large lenses become extremely heavy and can only be mechanically supported at their edges, causing sagging under their own weight
-- Dispersion causes different wavelengths of light to refract by different amounts when passing through a lens, creating chromatic aberration
+All modern scientific telescopes are reflectors because refractors have fundamental problems:
+- Some light traveling through a lens is absorbed
+- Large lenses are very heavy and can only be supported at their edges
+- Light traveling through a lens is refracted differently depending on wavelength (dispersion causes chromatic aberration)
 
-These limitations explain why all modern large scientific telescopes employ reflective designs.
+### Reflecting Telescopes
+
+In reflector designs, secondary mirrors redirect the focused light to a more convenient location for instruments or eyepieces.
 
 ## Ground-Based vs Space-Based Telescopes
 
-### Ground-Based Advantages
+### Ground-Based Telescopes
 
-Ground-based telescopes offer several practical advantages. They can be built with much larger mirror diameters than space-based instruments, providing superior light gathering power. Construction and maintenance costs are substantially lower than space missions, and the mechanical stability of a ground-based installation allows for easier upgrades and repairs.
+**Advantages:**
+- Can be built with bigger mirrors
+- Cost less than space missions
+- More mechanically stable
+- Easier to upgrade and repair
 
-Building telescopes on tall mountains, particularly in locations like the Atacama Desert or Mauna Kea, provides access to dry, stable atmospheric conditions with minimal light pollution. High altitude sites also allow observation of some infrared wavelengths before atmospheric absorption blocks them.
+**Disadvantages:**
+- Suffer from seeing effects
+- Atmosphere blocks many wavelengths
 
-### Ground-Based Disadvantages
+Building telescopes on tall mountains (like in the Atacama Desert or on Mauna Kea) provides:
+- Minimal light pollution (remote locations)
+- Less atmosphere to look through (high altitude at ~4000 meters)
+- Dry conditions with good weather
+- Access to some infrared wavelengths before atmospheric absorption
 
-All ground-based observations suffer from seeing effects caused by atmospheric turbulence. The atmosphere also blocks many wavelengths of electromagnetic radiation, particularly most infrared, ultraviolet, X-ray, and gamma-ray wavelengths.
+### Space-Based Telescopes
 
-### Space-Based Advantages
+**Advantages:**
+- No seeing effects
+- Can observe all wavelengths of light
+- Can control light pollution
+- No atmospheric absorption
 
-Space-based telescopes operate above Earth's atmosphere, eliminating seeing entirely. They can observe across the entire electromagnetic spectrum without atmospheric absorption. Space telescopes can also control their observing environment, avoiding light pollution and selecting optimal viewing times.
+**Disadvantages:**
+- Limited to smaller mirrors (launch constraints)
+- Much more expensive
+- Difficult or impossible to repair
 
-The Hubble Space Telescope operates with a 2.4-meter mirror, while the James Webb Space Telescope employs a 6.6-meter mirror optimized for infrared observations.
+**Notable Examples:**
+- Hubble Space Telescope: 2.4-meter (8-foot) mirror
+- James Webb Space Telescope: 6.6-meter (22-foot) mirror, optimized for infrared
 
-### Space-Based Disadvantages
+### Comparison Summary
 
-Space telescopes are limited to smaller mirror sizes due to launch vehicle constraints and the challenges of deploying large structures in orbit. Mission costs are substantially higher than equivalent ground-based facilities, and repairs or upgrades require expensive servicing missions or are impossible altogether.
+| Ground-Based | Space-Based |
+|:-------------|:------------|
+| Bigger mirrors | Smaller mirrors |
+| Cost less | Expensive |
+| More stable | Launch constraints |
+| Seeing limits resolution | No seeing |
+| Atmosphere blocks wavelengths | All wavelengths observable |
 
 ## Major Telescope Projects
 
 ### Extremely Large Telescope
 
-Construction began in 2014 on what will become the world's largest ground-based optical telescope, featuring a 39.3-meter primary mirror. Located in the Atacama Desert of Chile, the facility is expected to reach completion in 2027 at a cost of approximately 1.5 billion Euros. The site selection reflects ideal conditions: remote location with minimal light pollution, high altitude at 4000 meters to minimize atmospheric interference, and extremely dry climate ensuring excellent weather conditions.
+The world's largest ground-based optical telescope is under construction:
+- Mirror diameter: 39.3 meters (130 feet)
+- Location: Atacama Desert, Chile
+- Construction started: 2014
+- Expected completion: 2027
+- Cost: ~1.5 billion Euros = $1.7 billion USD
 
-### Notable Optical Telescopes
+**Site Selection Factors:**
+- Remote location (no light pollution)
+- High altitude at 4000 meters (minimizes atmosphere)
+- Extremely dry climate (good weather)
 
-The Keck Observatory operates twin 10-meter telescopes, while the Subaru telescope features an 8.3-meter mirror. The Very Large Telescope facility operates multiple large instruments that can work in combination.
+### Largest Optical Telescopes
+
+Notable ground-based facilities include:
+- Keck Observatory: Twin 10-meter telescopes
+- Subaru: 8.3-meter mirror
+- Very Large Telescope: Multiple large instruments
+
+### Mauna Kea, Hawaii
+
+Mauna Kea hosts multiple world-class observatories due to its excellent observing conditions at high altitude in a dry, dark environment.
 
 ## Radio Astronomy
 
-Radio telescopes observe the longest wavelengths in the electromagnetic spectrum. These longer wavelengths provide significant advantages: clouds, rain, snow, and other atmospheric interference don't affect radio observations. However, for equivalent collecting areas, radio telescopes achieve worse resolution than optical telescopes due to the relationship between wavelength and the diffraction limit.
+Radio telescopes observe the longest wavelengths in the electromagnetic spectrum. Radio wavelengths have important characteristics:
 
-Notable radio facilities include the Arecibo Observatory with its 300-meter dish (now collapsed), the Five Hundred Meter Aperture Spherical Radio Telescope (FAST), and the Very Large Array (VLA) with baselines extending from 1 to 36 kilometers.
+**Advantages:**
+- Clouds, rain, snow, and other intervening material don't interfere with observations
+- Can observe through weather that blocks optical light
+
+**Disadvantages:**
+- For the same collecting area, resolution is worse than optical telescopes (due to longer wavelengths)
+
+### Notable Radio Telescopes
+
+**Arecibo**: 300-meter (990-foot) dish (now collapsed)
+
+**FAST (Five Hundred Meter Aperture Spherical Radio Telescope)**: Currently the world's largest single-dish radio telescope
+
+**Very Large Array (VLA)**: Multiple dishes with baselines between 1 kilometer (0.62 miles) and 36 kilometers (22 miles)
 
 ### Interferometry
 
-Interferometry combines observations from two or more telescopes to simulate a single larger instrument. The Keck Observatory can operate its twin telescopes as an interferometer, while the Very Large Telescope array does the same with multiple instruments.
+Interferometry combines information from two or more telescopes to approximate a single larger telescope. Several facilities use this technique:
 
-The Atacama Large Millimeter Array (ALMA) uses this technique extensively. The Event Horizon Telescope represents the ultimate application of this concept, combining observations from eight or more radio telescopes distributed around the globe. This configuration creates an effective collecting area with a diameter equal to Earth itself, achieving resolution sufficient to image the event horizons of supermassive black holes like Sagittarius A*.
+**Keck Observatory**: Twin telescopes can work together
+
+**Very Large Telescope (VLT)**: Multiple instruments combine observations
+
+**Atacama Large Millimeter Array (ALMA)**: Extensive array working together
+
+### Event Horizon Telescope
+
+The Event Horizon Telescope represents the ultimate application of interferometry:
+- Uses observations from 8+ radio telescopes around the globe
+- Creates an effective collecting area with a diameter equal to Earth's
+- Resolution allows astronomers to take pictures of black holes
+- Successfully imaged Sagittarius A* (the supermassive black hole at our galaxy's center)
 
 ## Advanced Observational Techniques
 
 ### Multiwavelength Astronomy
 
-Comprehensive understanding of astronomical objects requires observations across multiple wavelengths of the electromagnetic spectrum. The same object can reveal completely different features when observed in radio, infrared, visible, ultraviolet, X-ray, or gamma-ray wavelengths.
+Comprehensive understanding requires observations across multiple wavelengths of the electromagnetic spectrum. The same object can reveal completely different features when observed in different wavelengths (radio, infrared, visible, ultraviolet, X-ray, gamma-ray).
+
+Much can be learned by looking at the same objects at different wavelengths.
 
 ### Multimessenger Astrophysics
 
-Modern astronomy extends beyond electromagnetic observations to include other types of signals. Neutrino detectors like IceCube capture these elusive particles from astronomical sources. Gravitational wave observatories such as LIGO detect ripples in spacetime caused by extreme cosmic events. Combining these different types of observations provides a more complete understanding of violent astronomical phenomena than any single observation type could achieve alone.
+Modern astronomy extends beyond electromagnetic observations to include other types of signals:
+
+**Neutrinos**: Captured by detectors like IceCube
+
+**Gravitational Waves**: Detected by observatories like LIGO Hanford
+
+Combining electromagnetic observations with neutrinos and gravitational waves provides a more complete understanding of extreme cosmic events than any single observation type could achieve alone.
