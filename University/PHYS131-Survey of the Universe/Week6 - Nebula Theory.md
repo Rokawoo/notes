@@ -43,7 +43,7 @@ The nebular theory explains how a new star and solar system form when interstell
 
 The nebular theory directly explains several solar system characteristics:
 - Characteristic 4: All planets orbit in the same direction due to the rotation of the original nebula
-- Characteristic 5: Most planets rotate in the same sense because of the nebula's angular momentum
+- Characteristic 5: Most planets rotate on their axis in the same sense as the Sun because of the nebula's angular momentum
 - Characteristic 7: Moons orbit in the same direction due to the inherited rotation from the nebula
 
 ## Protostar Formation
